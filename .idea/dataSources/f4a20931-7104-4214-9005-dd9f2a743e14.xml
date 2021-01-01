@@ -1246,6 +1246,7 @@ SELECT|sys.sys_config
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
     <index id="353" parent="291" name="user_objects_user_id_foreign">
       <ColNames>user_id</ColNames>
@@ -1276,7 +1277,6 @@ SELECT|sys.sys_config
     <column id="358" parent="292" name="second_name">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
     <column id="359" parent="292" name="email">
       <Position>4</Position>

@@ -31425,6 +31425,14 @@ select {
           animation: bounce 1s infinite;
 }
 
+.table-buttons{
+  text-align: right;
+}
+
+.table-buttons form{
+  display: contents;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
