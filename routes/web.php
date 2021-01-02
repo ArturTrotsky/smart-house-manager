@@ -22,6 +22,6 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 
-Route::resource('/objects', \App\Http\Controllers\ObjectsController::class);
+Route::resource('/objects', \App\Http\Controllers\ObjectsController::class)->middleware(['auth']);
 
 require __DIR__.'/auth.php';

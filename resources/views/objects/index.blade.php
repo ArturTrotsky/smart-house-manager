@@ -9,9 +9,6 @@
         <section class="content-header">
             <div class="container-fluid">
                 <div class="row mb-0">
-                    <div class="col-12 text-center">
-                        <h4><b>@yield('header')</b></h4>
-                    </div>
                 </div>
             </div>
         </section>
