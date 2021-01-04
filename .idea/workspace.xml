@@ -39,7 +39,6 @@
       <change afterPath="$PROJECT_DIR$/public/dist/img/credit/mastercard.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/dist/img/credit/paypal.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/dist/img/credit/paypal2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/dist/img/credit/visa.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/dist/img/default-150x150.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/dist/img/icons.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/dist/img/photo1.png" afterDir="false" />
@@ -54,11 +53,7 @@
       <change afterPath="$PROJECT_DIR$/public/dist/img/user1-128x128.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/dist/img/user2-160x160.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/dist/img/user3-128x128.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/dist/img/user4-128x128.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/dist/img/user5-128x128.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/dist/img/user6-128x128.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/dist/img/user7-128x128.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/dist/img/user8-128x128.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/dist/js/.eslintrc.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/dist/js/adminlte.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/dist/js/adminlte.js.map" afterDir="false" />
@@ -218,21 +213,10 @@
       <change afterPath="$PROJECT_DIR$/public/plugins/moment/locale/tl-ph.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/plugins/moment/locale/tlh.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/plugins/moment/locale/tr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/plugins/moment/locale/tzl.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/plugins/moment/locale/tzm-latn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/plugins/moment/locale/tzm.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/plugins/moment/locale/ug-cn.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/plugins/moment/locale/uk.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/plugins/moment/locale/ur.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/plugins/moment/locale/uz-latn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/plugins/moment/locale/uz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/plugins/moment/locale/vi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/plugins/moment/locale/x-pseudo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/plugins/moment/locale/yo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/plugins/moment/locale/zh-cn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/plugins/moment/locale/zh-hk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/plugins/moment/locale/zh-mo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/plugins/moment/locale/zh-tw.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/plugins/moment/locales.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/plugins/moment/locales.min.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/plugins/moment/locales.min.js.map" afterDir="false" />
@@ -298,11 +282,7 @@
       <change afterPath="$PROJECT_DIR$/public/plugins/select2/js/i18n/sv.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/plugins/select2/js/i18n/th.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/plugins/select2/js/i18n/tk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/plugins/select2/js/i18n/tr.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/plugins/select2/js/i18n/uk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/plugins/select2/js/i18n/vi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/plugins/select2/js/i18n/zh-CN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/plugins/select2/js/i18n/zh-TW.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/plugins/select2/js/select2.full.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/plugins/select2/js/select2.full.min.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/plugins/select2/js/select2.js" afterDir="false" />
@@ -348,7 +328,6 @@
       <change afterPath="$PROJECT_DIR$/resources/dist/img/credit/mastercard.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/dist/img/credit/paypal.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/dist/img/credit/paypal2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/dist/img/credit/visa.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/dist/img/default-150x150.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/dist/img/icons.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/dist/img/photo1.png" afterDir="false" />
@@ -362,12 +341,7 @@
       <change afterPath="$PROJECT_DIR$/resources/dist/img/prod-5.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/dist/img/user1-128x128.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/dist/img/user2-160x160.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/dist/img/user3-128x128.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/dist/img/user4-128x128.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/dist/img/user5-128x128.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/dist/img/user6-128x128.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/dist/img/user7-128x128.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/dist/img/user8-128x128.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/dist/js/.eslintrc.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/dist/js/adminlte.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/dist/js/adminlte.js.map" afterDir="false" />
@@ -446,16 +420,11 @@
       <change afterPath="$PROJECT_DIR$/resources/plugins/select2/js/i18n/sv.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/plugins/select2/js/i18n/th.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/plugins/select2/js/i18n/tk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/plugins/select2/js/i18n/tr.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/plugins/select2/js/i18n/uk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/plugins/select2/js/i18n/vi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/plugins/select2/js/i18n/zh-CN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/plugins/select2/js/i18n/zh-TW.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/plugins/select2/js/select2.full.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/plugins/select2/js/select2.full.min.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/plugins/select2/js/select2.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/plugins/select2/js/select2.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style-auth.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style-auth.css" afterDir="false" />
@@ -466,10 +435,8 @@
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/web.config" beforeDir="false" afterPath="$PROJECT_DIR$/public/web.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/objects/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/objects/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -674,7 +641,7 @@
       <workItem from="1609782595147" duration="76000" />
       <workItem from="1609782755280" duration="392000" />
       <workItem from="1609783164069" duration="658000" />
-      <workItem from="1609799378868" duration="343000" />
+      <workItem from="1609799378868" duration="677000" />
     </task>
     <task id="LOCAL-00001" summary="initial laravel &amp; bootstrap">
       <created>1609173840767</created>
@@ -725,7 +692,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609782318301</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add checkbox on objects.create.blade">
+      <created>1609799993520</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1609799993520</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add checkbox on objects.create.blade">
+      <created>1609800018215</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1609800018215</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
