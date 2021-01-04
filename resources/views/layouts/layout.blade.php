@@ -13,7 +13,7 @@
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-
+    @yield('pre-css')
     <title>@yield('title')</title>
 
 </head>
@@ -40,6 +40,8 @@
         $('.alert-success').fadeOut(2400);
     });
 </script>
+
+@yield('post-script')
 
 </body>
 </html>
