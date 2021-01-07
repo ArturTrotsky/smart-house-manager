@@ -11369,7 +11369,7 @@ body.sidebar-collapse:not(.sidebar-mini-md):not(.sidebar-mini) .main-header::bef
   body:not(.sidebar-mini-md) .main-footer,
   body:not(.sidebar-mini-md) .main-header {
     transition: margin-left 0.3s ease-in-out;
-    margin-left: 250px;
+    margin-left: 0px; /*change margin-left: 250px;*/
   }
 }
 
@@ -11404,7 +11404,7 @@ body.sidebar-collapse:not(.sidebar-mini-md):not(.sidebar-mini) .main-header::bef
   .sidebar-mini-md .main-footer,
   .sidebar-mini-md .main-header {
     transition: margin-left 0.3s ease-in-out;
-    margin-left: 250px;
+    margin-left: 0px; /*change margin-left: 250px;*/
   }
 }
 
@@ -13554,7 +13554,7 @@ body.text-sm .control-sidebar {
 .control-sidebar-open.control-sidebar-push .content-wrapper,
 .control-sidebar-open.control-sidebar-push .main-footer, .control-sidebar-open.control-sidebar-push-slide .content-wrapper,
 .control-sidebar-open.control-sidebar-push-slide .main-footer {
-  margin-right: 250px;
+  margin-right: 0px; /* change margin-right: 250px;*/
 }
 
 .control-sidebar-slide-open .control-sidebar {
@@ -13575,7 +13575,7 @@ body.text-sm .control-sidebar {
 .control-sidebar-slide-open.control-sidebar-push .content-wrapper,
 .control-sidebar-slide-open.control-sidebar-push .main-footer, .control-sidebar-slide-open.control-sidebar-push-slide .content-wrapper,
 .control-sidebar-slide-open.control-sidebar-push-slide .main-footer {
-  margin-right: 250px;
+  margin-right: 0px; /*change margin-right: 250px;*/
 }
 
 .control-sidebar-dark {

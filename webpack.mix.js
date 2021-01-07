@@ -25,11 +25,5 @@ mix.styles([
 mix.copy('resources/plugins', 'public/plugins');
 mix.copy('resources/dist', 'public/dist');
 
-
-
-
-
-
-
 mix.copy('resources/images', 'public/images');
 //mix.copy('resources/fonts', 'public/fonts');

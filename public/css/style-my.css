@@ -6,3 +6,12 @@
     height: 100vh;
     width: 100%;
 }
+
+.table-my thead th {
+    background-color: #98dfb6;
+}
+
+.table-my td {
+    vertical-align: middle !important;
+    font-size: larger;
+}

@@ -15,7 +15,7 @@ class ObjectsController extends Controller
      */
     public function index()
     {
-        $objects = UserObject::all();
+        $objects = UserObject::all()->sortBy('name');
         return view('objects.index', compact('objects'));
     }
 

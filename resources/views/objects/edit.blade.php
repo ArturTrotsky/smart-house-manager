@@ -1,11 +1,15 @@
 @extends('layouts.layout')
 
+@section('pre-css')
+    <link rel="stylesheet" href="{{ asset('plugins/select2/css/select2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
+@endsection
+
 @section('title', 'Edit ' . $object->name)
 
 @section('content')
 
     <div class="content-wrapper">
-
         <section class="content-header">
             <div class="container-fluid">
                 <div class="row mb-0">
@@ -13,22 +17,24 @@
             </div>
         </section>
 
+        @if($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach($errors->all() as $error)
+                        <li>{{$error}}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <section class="content">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-body">
-
-                            @if($errors->any())
-                                <div class="alert alert-danger">
-                                    <ul>
-                                        @foreach($errors->all() as $error)
-                                            <li>{{$error}}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            @endif
-
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <h3 class="card-title">Edit Object</h3>
+                            </div>
                             <form method="POST" action="{{route('objects.update', $object->id)}}">
                                 @csrf
                                 @method('PATCH')
@@ -56,6 +62,5 @@
                 </div>
             </div>
         </section>
-
     </div>
 @endsection
