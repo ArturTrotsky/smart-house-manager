@@ -22,7 +22,7 @@
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <a href="{{route('modules.create')}}" style="float: right;" class="btn btn-success">Add
+                                <a href="{{route('modules.create', ['object_id' => $object->id])}}" style="float: right;" class="btn btn-success">Add
                                     Module</a>
                             </ol>
                         </div>
@@ -94,7 +94,7 @@
                         </div>
                         <div class="col-sm-2">
                             <ol class="breadcrumb float-sm-right">
-                                <a href="{{route('modules.create')}}" style="float: right;" class="btn btn-danger">Add
+                                <a href="{{route('modules.create', ['object_id' => $object->id])}}" style="float: right;" class="btn btn-danger">Add
                                     New Module</a>
                             </ol>
                         </div>

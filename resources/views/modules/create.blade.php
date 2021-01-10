@@ -48,6 +48,8 @@
                             <form method="POST" action="{{route('modules.store')}}">
                                 @csrf
 
+                                <input type="hidden" name="object_id" value="{{$object_id}}">
+
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-md-6">

@@ -47,6 +47,7 @@
                             </div>
                             <form method="POST" action="{{route('objects.store')}}">
                                 @csrf
+
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label>Select object name or enter your name</label>
@@ -81,6 +82,7 @@
                                            id="object-name-input" style="display: none">
                                     </div>
                                 </div>
+
                                 <div class="card-footer">
                                     <div class="row">
                                         <div class="col-md-auto">
@@ -92,6 +94,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                             </form>
                         </div>
                     </div>

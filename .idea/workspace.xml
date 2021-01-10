@@ -405,7 +405,7 @@
       <workItem from="1609882292037" duration="12029000" />
       <workItem from="1609961864034" duration="14561000" />
       <workItem from="1610034123800" duration="48500000" />
-      <workItem from="1610291054290" duration="931000" />
+      <workItem from="1610291054290" duration="1528000" />
     </task>
     <task id="LOCAL-00001" summary="initial laravel &amp; bootstrap">
       <created>1609173840767</created>
@@ -570,7 +570,8 @@
     <MESSAGE value="add bootstrap for password.reset.blade" />
     <MESSAGE value="add checkbox on objects.create.blade" />
     <MESSAGE value="refactoring object views" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring object views" />
+    <MESSAGE value="refactoring modules" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring modules" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

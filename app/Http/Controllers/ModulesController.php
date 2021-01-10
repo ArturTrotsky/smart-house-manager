@@ -24,11 +24,11 @@ class ModulesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($object_id)
     {
         $moduleTypes = ModuleTypes::all()->sortBy('name');
 
-        return view('modules.create', compact('moduleTypes'));
+        return view('modules.create', compact('moduleTypes', 'object_id'));
     }
 
     /**
@@ -46,13 +46,11 @@ class ModulesController extends Controller
 
         $module = new Modules([
             'module_type_id' => $request->get('module_type_id'),
-            'object_id' => session('object_id'),
+            'object_id' => $request->get('object_id'),
             'name' => $request->get('name'),
             'ip_adress' => $request->get('ip_adress'),
         ]);
         $module->save();
-
-        Session::forget('object_id');
 
         return redirect("/objects/{$module->object_id}")
             ->with('success', "You have successfully added a \"$module->name\" module");
@@ -78,8 +76,9 @@ class ModulesController extends Controller
     public function edit($id)
     {
         $module = Modules::find($id);
+        $moduleTypes = ModuleTypes::all()->sortBy('name');
 
-        return view('modules.edit', compact('module'));
+        return view('modules.edit', compact('module', 'moduleTypes'));
     }
 
     /**

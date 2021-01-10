@@ -60,7 +60,6 @@ class ObjectsController extends Controller
     public function show($id)
     {
         $object = UserObject::find($id);
-        Session::put('object_id', $id);
 
         return view('objects.show', compact('object'));
     }

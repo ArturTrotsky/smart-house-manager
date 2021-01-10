@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\ModulesController;
+use App\Http\Controllers\ModuleTypesController;
+use App\Http\Controllers\ObjectsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +25,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::resource('/objects', \App\Http\Controllers\ObjectsController::class)->middleware(['auth']);
-Route::resource('/modules', \App\Http\Controllers\ModulesController::class)->middleware(['auth']);
-Route::resource('/module_types', \App\Http\Controllers\ModuleTypesController::class)->middleware(['auth']);
+Route::resource('/objects', ObjectsController::class)->middleware(['auth']);
+Route::resource('/modules', ModulesController::class)->except(['create'])->middleware(['auth']);
+Route::get('/object/{object_id}/modules/create', [ModulesController::class, 'create'])->name('modules.create')->middleware(['auth']);
+Route::resource('/module_types', ModuleTypesController::class)->middleware(['auth']);
