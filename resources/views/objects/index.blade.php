@@ -55,16 +55,20 @@
                                     <tr>
                                         <td>{{$object->id}}</td>
                                         <td>{{$object->name}}</td>
+
                                         <!--TODO: Изменить размер кнопок-->
-                                        <td><a href="{{route('objects.show', $object->id)}}"
-                                               @if(!$object->modules->isEmpty())
-                                               class="btn btn-success">
-                                                <i class="fa fa-wifi"> Show My Modules</i>
-                                                @else
-                                                    class="btn btn-danger">
+                                        @if(!$object->modules->isEmpty())
+                                            <td><a href="{{route('objects.show', $object->id)}}"
+                                                   class="btn btn-success">
+                                                    <i class="fa fa-wifi"> Show My Modules</i>
+                                                </a></td>
+                                        @else
+                                            <td><a href="{{route('modules.create', $object->id)}}"
+                                                   class="btn btn-danger">
                                                     <i class="fa fa-wifi"> Add Modules</i>
-                                                @endif
-                                            </a></td>
+                                                </a></td>
+                                        @endif
+
                                         <td class="table-buttons">
 
                                             <a href="{{route('objects.edit', $object->id)}}"

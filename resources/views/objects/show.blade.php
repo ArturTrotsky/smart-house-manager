@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/style-my.css') }}">
 @endsection
 
-@section('title', 'Object list')
+@section('title', 'Modules list')
 
 @section('content')
 
@@ -89,11 +89,17 @@
             <section class="content-header">
                 <div class="container-fluid">
                     <div class="row mb-2">
-                        <div class="col-sm-10 text-red">
+                        <div class="col-sm-8 text-red">
                             <h1>Your list of modules is empty. Please click Create New to add an item.</h1>
                         </div>
                         <div class="col-sm-2">
                             <ol class="breadcrumb float-sm-right">
+                                <a href="{{route('objects.index')}}"
+                                   class="btn btn-success">Back</a>
+                            </ol>
+                        </div>
+                        <div class="col-sm-2">
+                            <ol class="breadcrumb float-sm-left">
                                 <a href="{{route('modules.create', ['object_id' => $object->id])}}" style="float: right;" class="btn btn-danger">Add
                                     New Module</a>
                             </ol>

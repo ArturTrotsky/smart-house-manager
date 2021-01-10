@@ -73,7 +73,7 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="object-name" class="form-label">IP Address</label>
+                                                <label for="object-name" class="form-label">IP Address : Port</label>
                                                 <input type="text" name="ip_adress" value="{{$module->ip_adress}}"
                                                        class="form-control"
                                                        id="object-name">

@@ -16,7 +16,7 @@
     </script>
 @endsection
 
-@section('title', 'Add Object')
+@section('title', 'Create Object')
 
 @section('content')
     <div class="content-wrapper">
@@ -43,7 +43,7 @@
                     <div class="col-md-12">
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Create new Object</h3>
+                                <h3 class="card-title">Сreating a new object</h3>
                             </div>
                             <form method="POST" action="{{route('objects.store')}}">
                                 @csrf
@@ -61,6 +61,9 @@
                                                     data-dropdown-css-class="select2-purple"
                                                     style="width: 100%;"
                                                     name="name" type="text">
+
+                                            <!--TODO: Может создать таблицу objects?-->
+
                                                 <option disabled selected>Select a Object</option>
                                                 <option>Bathroom</option>
                                                 <option>Bedroom</option>
@@ -86,7 +89,7 @@
                                 <div class="card-footer">
                                     <div class="row">
                                         <div class="col-md-auto">
-                                            <a href="{{route('objects.index')}}"
+                                            <a href="{{ url()->previous() }}"
                                                class="btn btn-danger">Back</a>
                                         </div>
                                         <div class="col-md-auto">

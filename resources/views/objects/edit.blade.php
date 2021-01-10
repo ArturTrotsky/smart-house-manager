@@ -48,11 +48,11 @@
                                 <div class="card-footer">
                                     <div class="row">
                                         <div class="col-md-auto">
-                                            <a href="{{route('objects.index')}}"
+                                            <a href="{{ url()->previous() }}"
                                                class="btn btn-danger">Back</a>
                                         </div>
                                         <div class="col-md-auto">
-                                            <button type="submit" class="btn btn-success">Edit</button>
+                                            <button type="submit" class="btn btn-success">Save</button>
                                         </div>
                                     </div>
                                 </div>

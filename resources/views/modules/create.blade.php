@@ -56,7 +56,7 @@
                                             <div class="form-group">
                                                 <label for="object-name" class="form-label">Name</label>
                                                 <input type="text" name="name" value="{{old('name')}}"
-                                                       placeholder="Enter a Object" class="form-control"
+                                                       placeholder="Enter a module name" class="form-control"
                                                        id="object-name">
                                             </div>
                                         </div>
@@ -68,8 +68,7 @@
                                                         style="width: 100%;"
                                                         name="module_type_id"
                                                         type="text">
-                                                    <option selected="selected"
-                                                            value=""></option>
+                                                    <option disabled selected>Select a module type</option>
                                                     @foreach($moduleTypes as $type)
                                                         <option
                                                             value="{{$type->id}}">{{$type->name}}
@@ -85,9 +84,9 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="object-name" class="form-label">IP Address</label>
-                                                <input type="text" name="ip_adress" value="{{old('ip_adress')}}"
-                                                       placeholder="Enter a Object" class="form-control"
+                                                <label for="object-name" class="form-label">IP Address : Port (auto generate)</label>
+                                                <input type="text" name="ip_adress" value="{{generateIP()}}"
+                                                       placeholder="Enter a module IP address : Port" class="form-control"
                                                        id="object-name">
                                             </div>
                                         </div>

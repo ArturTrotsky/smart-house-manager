@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Modules;
 use App\Models\ModuleTypes;
-use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 
 class ModulesController extends Controller
@@ -39,9 +38,11 @@ class ModulesController extends Controller
      */
     public function store(Request $request)
     {
+
+        /*TODO: Настоить сообщения об ошибках*/
         $request->validate([
             'name' => 'required|max:255',
-            'ip_adress' => 'required|max:255'
+            'ip_adress' => 'regex:/[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}:[0-9]{1,5}/'
         ]);
 
         $module = new Modules([
