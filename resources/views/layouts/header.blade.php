@@ -23,7 +23,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{route('objects.index')}}">Objects</a>
                         <a class="dropdown-item" href="{{route('modules.index')}}">Module Types</a>
-                        <a class="dropdown-item" href="{{route('params.index')}}">Module Params</a>
+                        <a class="dropdown-item" href="{{route('module_types.index')}}">Module Params</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Something else here</a>
                     </div>

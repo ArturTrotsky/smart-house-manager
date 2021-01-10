@@ -23,3 +23,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::resource('/objects', \App\Http\Controllers\ObjectsController::class)->middleware(['auth']);
+Route::resource('/modules', \App\Http\Controllers\ModulesController::class)->middleware(['auth']);
+Route::resource('/module_types', \App\Http\Controllers\ModuleTypesController::class)->middleware(['auth']);

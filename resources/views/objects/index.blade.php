@@ -55,11 +55,18 @@
                                     <tr>
                                         <td>{{$object->id}}</td>
                                         <td>{{$object->name}}</td>
-                                        <td><a href="{{route('objects.show', $object->id)}}" class="btn btn-success">
-
-                                                <i class="fa fa-wifi"> Show Modules</i>
+                                        <!--TODO: Изменить размер кнопок-->
+                                        <td><a href="{{route('objects.show', $object->id)}}"
+                                               @if(!$object->modules->isEmpty())
+                                               class="btn btn-success">
+                                                <i class="fa fa-wifi"> Show My Modules</i>
+                                                @else
+                                                    class="btn btn-danger">
+                                                    <i class="fa fa-wifi"> Add Modules</i>
+                                                @endif
                                             </a></td>
                                         <td class="table-buttons">
+
                                             <a href="{{route('objects.edit', $object->id)}}"
                                                class="btn btn-primary" title="Edit Object">
                                                 <i class="fa fa-pencil"></i>
@@ -68,7 +75,7 @@
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-danger"
-                                                    title="Delete Object" onclick="return confirm('Are you sure?')">
+                                                        title="Delete Object" onclick="return confirm('Are you sure?')">
                                                     <i class="fa fa-trash"></i>
                                                 </button>
                                             </form>

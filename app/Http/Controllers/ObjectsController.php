@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\UserObject;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class ObjectsController extends Controller
 {
@@ -59,6 +60,7 @@ class ObjectsController extends Controller
     public function show($id)
     {
         $object = UserObject::find($id);
+        Session::put('object_id', $id);
 
         return view('objects.show', compact('object'));
     }

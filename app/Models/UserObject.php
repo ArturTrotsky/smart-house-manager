@@ -20,4 +20,9 @@ class UserObject extends Model
     {
         return $this->belongsTo(User::class, 'user_id', 'id')->withDefault();
     }
+
+    public function modules()
+    {
+        return $this->hasMany(Modules::class, 'object_id', 'id');
+    }
 }

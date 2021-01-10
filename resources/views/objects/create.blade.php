@@ -16,7 +16,7 @@
     </script>
 @endsection
 
-@section('title', 'Add object')
+@section('title', 'Add Object')
 
 @section('content')
     <div class="content-wrapper">
