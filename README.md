@@ -1,6 +1,6 @@
-# ![Laravel Example App](logo.png)
+# Smart House Manager
 
-> ### This contains the application code for the Smart House Manager. The app is build on top of Laravel framework v8.21.0 which runs on the LAMP stack.
+## This contains the application code for the Smart House Manager. The app is build on top of Laravel framework v8.21.0 which runs on the LAMP stack.
 Web application that allows you to control your smart home. The application is a smart home device manager, with which you can monitor the states of devices, add, remove modules, configure plans for modules, enable / disable modules (in this example, imitation of actions). Examples of devices: lamp, socket, thermostat, boiler, camera, etc.
 This repo is functionality complete — PRs and issues welcome!
 
