@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ObjectsRequest;
 use App\Models\UserObject;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -35,12 +36,8 @@ class ObjectsController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ObjectsRequest $request)
     {
-        $request->validate([
-            'name' => 'required|max:255'
-        ]);
-
         $object = new UserObject([
             'name' => $request->get('name'),
             'user_id' => Auth::user()->id
@@ -83,12 +80,8 @@ class ObjectsController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ObjectsRequest $request, $id)
     {
-        $request->validate([
-            'name' => 'required|max:255'
-        ]);
-
         $object = UserObject::find($id);
         $object->update($request->all());
 

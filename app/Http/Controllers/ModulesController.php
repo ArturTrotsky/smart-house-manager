@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ModulesRequest;
 use App\Models\Modules;
 use App\Models\ModuleTypes;
 use Illuminate\Http\Request;
@@ -36,15 +37,8 @@ class ModulesController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ModulesRequest $request)
     {
-
-        /*TODO: Настоить сообщения об ошибках*/
-        $request->validate([
-            'name' => 'required|max:255',
-            'ip_adress' => 'regex:/[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}:[0-9]{1,5}/'
-        ]);
-
         $module = new Modules([
             'module_type_id' => $request->get('module_type_id'),
             'object_id' => $request->get('object_id'),
@@ -89,13 +83,8 @@ class ModulesController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ModulesRequest $request, $id)
     {
-        $request->validate([
-            'name' => 'required|max:255',
-            'ip_adress' => 'required|max:255'
-        ]);
-
         $module = Modules::find($id);
         $module->update($request->all());
 

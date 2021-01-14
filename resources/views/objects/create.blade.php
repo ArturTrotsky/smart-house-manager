@@ -72,8 +72,10 @@
                                                 <option>Cloakroom</option>
                                                 <option>Dining-room</option>
                                                 <option>Games room</option>
+                                                <option>Garage</option>
                                                 <option>Hall</option>
                                                 <option>Kitchen</option>
+                                                <option>Laboratory</option>
                                                 <option>Living-room</option>
                                                 <option>Study room</option>
                                                 <option>Toilet</option>
