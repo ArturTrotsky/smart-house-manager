@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ObjectsRequest;
 use App\Models\UserObject;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class ObjectsController extends Controller

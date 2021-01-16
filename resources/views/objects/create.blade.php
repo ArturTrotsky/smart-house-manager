@@ -7,10 +7,14 @@
         function handleClick(element) {
             if (element.checked) {
                 $("#object-name-input").show();
+                $("#object-name-input").prop('disabled', false);
                 $("#div-select").hide();
+                $("#div-select").prop('disabled', true);
             } else {
                 $("#object-name-input").hide();
+                $("#object-name-input").prop('disabled', true);
                 $("#div-select").show();
+                $("#div-select").prop('disabled', false);
             }
         }
     </script>
@@ -43,7 +47,7 @@
                     <div class="col-md-12">
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Сreating a new object</h3>
+                                <h3 class="card-title">Creating a new object</h3>
                             </div>
                             <form method="POST" action="{{route('objects.store')}}">
                                 @csrf
@@ -51,10 +55,10 @@
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label>Select object name or enter your name</label>
-                                            <!-- Bootstrap Switch -->
-                                            <input type="checkbox" name="my-checkbox" onchange="handleClick(this)"
-                                                   data-bootstrap-switch data-off-color="danger"
-                                                   data-on-color="success">
+                                        <!-- Bootstrap Switch -->
+                                        <input type="checkbox" name="my-checkbox" onchange="handleClick(this)"
+                                               data-bootstrap-switch data-off-color="danger"
+                                               data-on-color="success">
 
                                         <div id="div-select">
                                             <select id="object-name-select" class="select2"
@@ -62,8 +66,7 @@
                                                     style="width: 100%;"
                                                     name="name" type="text">
 
-                                            <!--TODO: Может создать таблицу objects?-->
-
+                                                <!--TODO: Может создать таблицу objects?-->
                                                 <option disabled selected>Select a Object</option>
                                                 <option>Bathroom</option>
                                                 <option>Bedroom</option>
@@ -82,9 +85,9 @@
                                                 <option>Utility room</option>
                                             </select>
                                         </div>
-                                    <input type="text" name="name" value="{{old('name')}}"
-                                           placeholder="Enter a Object" class="form-control"
-                                           id="object-name-input" style="display: none">
+                                        <input type="text" name="name" value="{{old('name')}}"
+                                               placeholder="Enter a Object" class="form-control"
+                                               id="object-name-input" style="display: none">
                                     </div>
                                 </div>
 

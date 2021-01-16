@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddCreatedAtToModuleTypesTable extends Migration
+class AddFieldsToModuleParamsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class AddCreatedAtToModuleTypesTable extends Migration
      */
     public function up()
     {
-        Schema::table('module_types', function (Blueprint $table) {
-            $table->timestamp('created_at')->useCurrent();
+        Schema::table('module_params', function (Blueprint $table) {
+            $table->timestamp('updated_at')->nullable();
+            $table->softDeletes();
         });
     }
 
@@ -25,8 +26,9 @@ class AddCreatedAtToModuleTypesTable extends Migration
      */
     public function down()
     {
-        Schema::table('module_types', function (Blueprint $table) {
-            //
+        Schema::table('module_params', function (Blueprint $table) {
+            $table->dropColumn('updated_at');
+            $table->dropSoftDeletes();
         });
     }
 }

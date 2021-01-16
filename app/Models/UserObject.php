@@ -14,7 +14,7 @@ class UserObject extends Model
         'name',
     ];
 
-    public $timestamps = false;
+    public $timestamp = true;
 
     public function user()
     {

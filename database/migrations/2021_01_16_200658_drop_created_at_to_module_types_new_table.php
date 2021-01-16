@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddCreatedAtToModuleTypesTable extends Migration
+class DropCreatedAtToModuleTypesNewTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AddCreatedAtToModuleTypesTable extends Migration
     public function up()
     {
         Schema::table('module_types', function (Blueprint $table) {
-            $table->timestamp('created_at')->useCurrent();
+            $table->dropColumn('created_at');
         });
     }
 

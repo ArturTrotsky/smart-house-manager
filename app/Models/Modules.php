@@ -16,7 +16,7 @@ class Modules extends Model
         'ip_adress',
     ];
 
-    public $timestamps = false;
+    public $timestamp = true;
 
     public function type()
     {

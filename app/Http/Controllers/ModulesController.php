@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ModulesRequest;
 use App\Models\Modules;
 use App\Models\ModuleTypes;
-use Illuminate\Http\Request;
 
 class ModulesController extends Controller
 {

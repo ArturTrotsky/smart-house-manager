@@ -9,7 +9,7 @@ class ModuleTypes extends Model
 {
     use HasFactory;
 
-    public $timestamps = false;
+    public $timestamp = true;
 
     protected $fillable = [
         'name',

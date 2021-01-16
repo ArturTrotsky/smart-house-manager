@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ca78f95-75d8-478c-94be-583e8ae6a4c9" name="Default Changelist" comment="create requests and factories">
-      <change afterPath="$PROJECT_DIR$/#README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/how-i-make/.~lock.how i make project ubuntu.docx#" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/how-i-make/.~lock.task.docx#" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="4ca78f95-75d8-478c-94be-583e8ae6a4c9" name="Default Changelist" comment="refactoring README.md">
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_16_200658_drop_created_at_to_module_types_new_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_16_200754_add_fields_to_module_types_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_16_205134_drop_name_to_module_params_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_16_205334_add_fields_to_module_params_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_16_212130_add_fields_to_user_objects_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_16_212235_add_fields_to_modules_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_16_212425_drop_created_at_to_module_plans_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_16_212519_add_fields_to_module_plans_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f4a20931-7104-4214-9005-dd9f2a743e14.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f4a20931-7104-4214-9005-dd9f2a743e14.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ModulesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ModulesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ObjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ObjectsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/ModuleTypes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ModuleTypes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Modules.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Modules.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/UserObject.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserObject.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ModuleTypesFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ModuleTypesFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_12_132009_add_created_at_to_module_types_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_12_132009_add_created_at_to_module_types_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/how-i-make/how i make project ubuntu.docx" beforeDir="false" afterPath="$PROJECT_DIR$/how-i-make/how i make project ubuntu.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/how-i-make/task.docx" beforeDir="false" afterPath="$PROJECT_DIR$/how-i-make/task.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/objects/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/objects/create.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +234,9 @@
       <workItem from="1610034123800" duration="48500000" />
       <workItem from="1610291054290" duration="29139000" />
       <workItem from="1610431215556" duration="40392000" />
-      <workItem from="1610627157263" duration="15948000" />
+      <workItem from="1610627157263" duration="16327000" />
+      <workItem from="1610740336931" duration="605000" />
+      <workItem from="1610741054550" duration="14629000" />
     </task>
     <task id="LOCAL-00001" summary="initial laravel &amp; bootstrap">
       <created>1609173840767</created>
@@ -346,7 +364,21 @@
       <option name="project" value="LOCAL" />
       <updated>1610650003888</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="refactoring README.md">
+      <created>1610657095889</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1610657095889</updated>
+    </task>
+    <task id="LOCAL-00020" summary="refactoring README.md">
+      <created>1610657291539</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1610657291539</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,7 +455,8 @@
     <MESSAGE value="add helpers and refactoring views" />
     <MESSAGE value="change home routing and refacoring header view" />
     <MESSAGE value="create requests and factories" />
-    <option name="LAST_COMMIT_MESSAGE" value="create requests and factories" />
+    <MESSAGE value="refactoring README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring README.md" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
