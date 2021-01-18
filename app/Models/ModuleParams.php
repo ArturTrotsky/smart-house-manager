@@ -9,5 +9,10 @@ class ModuleParams extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'module_id',
+        'value',
+    ];
 
+    public $timestamp = true;
 }

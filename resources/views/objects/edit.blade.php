@@ -17,38 +17,36 @@
             </div>
         </section>
 
-        @if($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach($errors->all() as $error)
-                        <li>{{$error}}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Edit Object</h3>
+                                <h3 class="card-title">Edit {{ $object->name }} Object</h3>
                             </div>
-                            <form method="POST" action="{{route('objects.update', $object->id)}}">
+                            <form method="POST" action="{{ route('objects.update', $object->id) }}">
                                 @csrf
                                 @method('PATCH')
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label for="object-name" class="form-label">Name</label>
-                                        <input type="text" name="name" value="{{$object->name}}" class="form-control"
+                                        <input type="text" name="name" value="{{ old('name') ?? $object->name }}"
+                                               class="form-control @error('name') is-invalid @enderror"
                                                id="object-name">
+
+                                        @error('name')
+                                        <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                        @enderror
+
                                     </div>
                                 </div>
                                 <div class="card-footer">
                                     <div class="row">
                                         <div class="col-md-auto">
-                                            <a href="{{ url()->previous() }}"
+                                            <a href="{{ route('objects.index') }}"
                                                class="btn btn-danger">Back</a>
                                         </div>
                                         <div class="col-md-auto">

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ModulesRequest;
+use App\Models\ModuleParams;
 use App\Models\Modules;
 use App\Models\ModuleTypes;
 
@@ -39,15 +40,20 @@ class ModulesController extends Controller
     public function store(ModulesRequest $request)
     {
         $module = new Modules([
-            'module_type_id' => $request->get('module_type_id'),
-            'object_id' => $request->get('object_id'),
-            'name' => $request->get('name'),
-            'ip_adress' => $request->get('ip_adress'),
+            'module_type_id' => $request->input('module_type_id'),
+            'object_id' => $request->input('object_id'),
+            'name' => $request->input('name'),
+            'ip_adress' => $request->input('ip_adress'),
         ]);
         $module->save();
 
+        $moduleParams = new ModuleParams([
+            'module_id' => $module->id,
+        ]);
+        $moduleParams->save();
+
         return redirect("/objects/{$module->object_id}")
-            ->with('success', "You have successfully added a \"$module->name\" module");
+            ->with('success', "You have successfully added a " . $module->name . " module");
     }
 
     /**
@@ -85,9 +91,12 @@ class ModulesController extends Controller
     public function update(ModulesRequest $request, $id)
     {
         $module = Modules::find($id);
-        $module->update($request->all());
+        $module->module_type_id = $request->input('module_type_id');
+        $module->name = $request->input('name');
+        $module->ip_adress = $request->input('ip_adress');
+        $module->save();
 
-        return redirect("/objects/{$module->object_id}")->with('success', "You have successfully updated the \"$module->name\" module");
+        return redirect("/objects/{$module->object_id}")->with('success', "You have successfully updated the " . $module->name . " module");
     }
 
     /**
@@ -99,9 +108,7 @@ class ModulesController extends Controller
     public function destroy($id)
     {
         $module = Modules::find($id);
-
         $objectId = $module->object_id;
-
         $module->delete();
 
         return redirect("/objects/$objectId")->with('success', 'Object deleted!');

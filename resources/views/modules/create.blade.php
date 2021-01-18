@@ -27,16 +27,6 @@
             </div>
         </section>
 
-        @if($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach($errors->all() as $error)
-                        <li>{{$error}}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
@@ -45,25 +35,36 @@
                             <div class="card-header">
                                 <h3 class="card-title">Create new Module</h3>
                             </div>
-                            <form method="POST" action="{{route('modules.store')}}">
+                            <form method="POST" action="{{ route('modules.store') }}">
                                 @csrf
 
-                                <input type="hidden" name="object_id" value="{{$object_id}}">
+                                <input type="hidden" name="object_id" value="{{ $object_id }}">
 
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="object-name" class="form-label">Name</label>
-                                                <input type="text" name="name" value="{{old('name')}}"
-                                                       placeholder="Enter a module name" class="form-control"
+                                                <input type="text" name="name" value="{{ old('name') }}"
+                                                       placeholder="Enter a module name"
+                                                       class="form-control @error('name') is-invalid @enderror"
                                                        id="object-name">
+
+                                                @error('name')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                                @enderror
+
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="object-name" class="form-label">Type</label>
-                                                <select class="form-control select2 select2-danger"
+                                                <select class="form-control select2 select2-danger
+
+                                                        @error('module_type_id') is-invalid @enderror"
+
                                                         data-dropdown-css-class="select2-danger"
                                                         style="width: 100%;"
                                                         name="module_type_id"
@@ -71,10 +72,17 @@
                                                     <option disabled selected>Select a module type</option>
                                                     @foreach($moduleTypes as $type)
                                                         <option
-                                                            value="{{$type->id}}">{{$type->name}}
+                                                            value="{{ $type->id }}">{{ $type->name }}
                                                         </option>
                                                     @endforeach
                                                 </select>
+
+                                                @error('module_type_id')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                                @enderror
+
                                             </div>
                                         </div>
                                     </div>
@@ -84,10 +92,20 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="object-name" class="form-label">IP Address : Port (auto generate)</label>
-                                                <input type="text" name="ip_adress" value="{{generateIP()}}"
-                                                       placeholder="Enter a module IP address : Port" class="form-control"
+                                                <label for="object-name" class="form-label">IP Address : Port
+                                                    (autodiscover)</label>
+                                                <input type="text" name="ip_adress"
+                                                       value="{{ old('ip_adress') ?? generateIP() }}"
+                                                       placeholder="Enter a module IP address : Port"
+                                                       class="form-control @error('ip_adress') is-invalid @enderror"
                                                        id="object-name">
+
+                                                @error('ip_adress')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                                @enderror
+
                                             </div>
                                         </div>
                                     </div>
@@ -96,7 +114,7 @@
                                 <div class="card-footer">
                                     <div class="row">
                                         <div class="col-md-auto">
-                                            <a href="{{ url()->previous() }}"
+                                            <a href="{{ route('objects.show', $object_id) }}"
                                                class="btn btn-danger">Back</a>
                                         </div>
                                         <div class="col-md-auto">

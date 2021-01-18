@@ -20,14 +20,14 @@ use Illuminate\Support\Facades\Route;
     return view('welcome');
 });*/
 
-Route::get('/', [ObjectsController::class, 'index'])->middleware('auth');
+Route::get('/', [ObjectsController::class, 'index'])->middleware(['auth', 'verified']);
 
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('/objects', ObjectsController::class);
     Route::resource('/modules', ModulesController::class)->except(['create']);
     Route::get('/object/{object_id}/modules/create', [ModulesController::class, 'create'])->name('modules.create');

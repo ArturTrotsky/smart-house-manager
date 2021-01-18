@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             UserObjectSeeder::class,
             ModuleTypesSeeder::class,
             ModulesSeeder::class,
+            ModuleParamsSeeder::class,
         ]);
     }
 }

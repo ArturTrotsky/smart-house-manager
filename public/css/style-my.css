@@ -20,3 +20,7 @@
     height: 200px !important;
     width: 700px !important;
 }
+
+.btn-my {
+    min-width: 200px;
+}

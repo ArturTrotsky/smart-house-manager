@@ -27,7 +27,7 @@ class ModulesFactory extends Factory
             'module_type_id' => ModuleTypes::all('id')->random(),
             'object_id' => UserObject::all('id')->random(),
             'name' => 'module_name_' . $this->faker->unique()->numberBetween($min = 1, $max = 100),
-            'ip_adress' => $this->faker->ipv4 . ':' . $this->faker->numberBetween($min = 0, $max = 65536)
+            'ip_adress' => $this->faker->localIpv4 . ':' . $this->faker->numberBetween($min = 0, $max = 65536)
         ];
     }
 }

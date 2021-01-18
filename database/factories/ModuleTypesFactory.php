@@ -19,12 +19,13 @@ class ModuleTypesFactory extends Factory
 
     protected $unit = ['%', '%', '°C', '°C', 'off', 'on', 'off', 'off', 'on'];
 
+    protected $i = -1;
+
     /**
      * Define the model's default state.
      *
      * @return array
      */
-    protected $i = -1;
 
     public function definition()
     {

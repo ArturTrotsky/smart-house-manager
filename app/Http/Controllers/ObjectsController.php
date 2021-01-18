@@ -38,12 +38,12 @@ class ObjectsController extends Controller
     public function store(ObjectsRequest $request)
     {
         $object = new UserObject([
-            'name' => $request->get('name'),
-            'user_id' => Auth::user()->id
+            'name' => $request->input('name'),
+            'user_id' => Auth::id()
         ]);
         $object->save();
 
-        return redirect('/objects')->with('success', "You have successfully added a \"$object->name\" object");
+        return redirect('/objects')->with('success', "You have successfully added a " . $object->name . " object");
     }
 
     /**
@@ -82,9 +82,9 @@ class ObjectsController extends Controller
     public function update(ObjectsRequest $request, $id)
     {
         $object = UserObject::find($id);
-        $object->update($request->all());
+        $object->update(['name' => $request->input('name')]);
 
-        return redirect('/objects')->with('success', "You have successfully updated the \"$object->name\" object");
+        return redirect('/objects')->with('success', "You have successfully updated the " . $object->name . " object");
     }
 
     /**

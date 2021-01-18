@@ -20,7 +20,7 @@
     </script>
 @endsection
 
-@section('title', 'Create Object')
+@section('title', 'Add Object')
 
 @section('content')
     <div class="content-wrapper">
@@ -31,25 +31,15 @@
             </div>
         </section>
 
-        @if($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach($errors->all() as $error)
-                        <li>{{$error}}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Creating a new object</h3>
+                                <h3 class="card-title">Creating new Object</h3>
                             </div>
-                            <form method="POST" action="{{route('objects.store')}}">
+                            <form method="POST" action="{{ route('objects.store') }}">
                                 @csrf
 
                                 <div class="card-body">
@@ -61,13 +51,14 @@
                                                data-on-color="success">
 
                                         <div id="div-select">
-                                            <select id="object-name-select" class="select2"
+                                            <select id="object-name-select"
+                                                    class="select2 @error('name') is-invalid @enderror"
                                                     data-dropdown-css-class="select2-purple"
                                                     style="width: 100%;"
                                                     name="name" type="text">
 
                                                 <!--TODO: Может создать таблицу objects?-->
-                                                <option disabled selected>Select a Object</option>
+                                                <option disabled selected hidden>Select a Object</option>
                                                 <option>Bathroom</option>
                                                 <option>Bedroom</option>
                                                 <option>Boxroom</option>
@@ -84,17 +75,27 @@
                                                 <option>Toilet</option>
                                                 <option>Utility room</option>
                                             </select>
+
                                         </div>
-                                        <input type="text" name="name" value="{{old('name')}}"
-                                               placeholder="Enter a Object" class="form-control"
+
+                                        <input type="text" name="name" value="{{ old('name') }}"
+                                               placeholder="Enter a Object"
+                                               class="form-control @error('name') is-invalid @enderror"
                                                id="object-name-input" style="display: none">
+
+                                        @error('name')
+                                        <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                        @enderror
+
                                     </div>
                                 </div>
 
                                 <div class="card-footer">
                                     <div class="row">
                                         <div class="col-md-auto">
-                                            <a href="{{ url()->previous() }}"
+                                            <a href="{{ route('objects.index') }}"
                                                class="btn btn-danger">Back</a>
                                         </div>
                                         <div class="col-md-auto">

@@ -19,6 +19,7 @@
 
                     <h1 class="form-header">{{ __('Sign Up') }}</h1>
 
+
                     <div class="form-group row">
                         <label for="name"
                                class="col-form-label-big-lg text-md-right">{{ __('Name') }}</label>
