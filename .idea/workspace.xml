@@ -1,35 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ca78f95-75d8-478c-94be-583e8ae6a4c9" name="Default Changelist" comment="refactoring checkbox and migrations">
-      <change afterPath="$PROJECT_DIR$/database/factories/ModuleParamsFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_16_222245_change_fields_to_module_params_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/ModuleParamsSeeder.php" afterDir="false" />
+    <list default="true" id="4ca78f95-75d8-478c-94be-583e8ae6a4c9" name="Default Changelist" comment="add requests, refactoring controllers, views">
       <change afterPath="$PROJECT_DIR$/how-i-make/.~lock.how i make project ubuntu.docx#" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/#verify.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f4a20931-7104-4214-9005-dd9f2a743e14.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f4a20931-7104-4214-9005-dd9f2a743e14.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/errors/401.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/errors/403.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/errors/404.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/errors/419.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/errors/429.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/errors/500.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/errors/503.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/errors/illustrated-layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ModulesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ModulesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ObjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ObjectsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ModulesRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ModulesRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ObjectsRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ObjectsRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ModuleParams.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ModuleParams.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/ModuleTypesFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ModuleTypesFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/ModulesFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ModulesFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/how-i-make/task.docx" beforeDir="false" afterPath="$PROJECT_DIR$/how-i-make/task.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style-my.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style-my.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/style-my.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/style-my.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/modules/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modules/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/modules/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modules/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/objects/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/objects/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/objects/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/objects/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/objects/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/objects/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/objects/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/objects/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +164,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/node_modules/bootstrap/scss/_tables.scss" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/auth" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/svg" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -189,13 +172,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/svg" />
       <recent name="$PROJECT_DIR$/resources/views/auth" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/resources/views/objects" />
       <recent name="$PROJECT_DIR$/resources/views/auth/passwords" />
-      <recent name="$PROJECT_DIR$/resources/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/storage/app/public" />
       <recent name="$PROJECT_DIR$/public/css" />
       <recent name="$PROJECT_DIR$/resources/css" />
     </key>
@@ -245,7 +229,8 @@
       <workItem from="1610627157263" duration="16327000" />
       <workItem from="1610740336931" duration="605000" />
       <workItem from="1610741054550" duration="27860000" />
-      <workItem from="1610986767560" duration="8573000" />
+      <workItem from="1610986767560" duration="12411000" />
+      <workItem from="1611077447532" duration="2110000" />
     </task>
     <task id="LOCAL-00001" summary="initial laravel &amp; bootstrap">
       <created>1609173840767</created>
@@ -394,7 +379,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610832858331</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="add requests, refactoring controllers, views">
+      <created>1611001834010</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1611001834010</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -473,7 +465,8 @@
     <MESSAGE value="create requests and factories" />
     <MESSAGE value="refactoring README.md" />
     <MESSAGE value="refactoring checkbox and migrations" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring checkbox and migrations" />
+    <MESSAGE value="add requests, refactoring controllers, views" />
+    <option name="LAST_COMMIT_MESSAGE" value="add requests, refactoring controllers, views" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
