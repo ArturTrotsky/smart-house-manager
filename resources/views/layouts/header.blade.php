@@ -9,7 +9,7 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{route('objects.index')}}">OBJECTS <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{ route('objects.index') }}">OBJECTS <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
 

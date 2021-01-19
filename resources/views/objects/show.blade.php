@@ -1,13 +1,5 @@
 @extends('layouts.layout')
 
-@section('pre-css')
-    <link rel="stylesheet" href="{{ asset('plugins/select2/css/select2.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/v4-shims.css') }}">
-    <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style-my.css') }}">
-@endsection
-
 @section('title', 'Modules list')
 
 @section('content')

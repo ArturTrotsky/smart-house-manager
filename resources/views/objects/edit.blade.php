@@ -1,10 +1,5 @@
 @extends('layouts.layout')
 
-@section('pre-css')
-    <link rel="stylesheet" href="{{ asset('plugins/select2/css/select2.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
-@endsection
-
 @section('title', 'Edit ' . $object->name)
 
 @section('content')

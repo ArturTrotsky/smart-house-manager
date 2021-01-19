@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ca78f95-75d8-478c-94be-583e8ae6a4c9" name="Default Changelist" comment="add requests, refactoring controllers, views">
-      <change afterPath="$PROJECT_DIR$/how-i-make/.~lock.how i make project ubuntu.docx#" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/401.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/403.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/404.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/419.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/429.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/500.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/503.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/illustrated-layout.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/project.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/jquery/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/jquery/jquery.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/modules/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modules/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/modules/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modules/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/objects/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/objects/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/objects/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/objects/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/objects/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/objects/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/objects/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/objects/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +231,8 @@
       <workItem from="1610740336931" duration="605000" />
       <workItem from="1610741054550" duration="27860000" />
       <workItem from="1610986767560" duration="12411000" />
-      <workItem from="1611077447532" duration="2110000" />
+      <workItem from="1611077447532" duration="4488000" />
+      <workItem from="1611085705107" duration="3306000" />
     </task>
     <task id="LOCAL-00001" summary="initial laravel &amp; bootstrap">
       <created>1609173840767</created>
@@ -386,7 +388,21 @@
       <option name="project" value="LOCAL" />
       <updated>1611001834010</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="add storage link and add errors pages">
+      <created>1611080352843</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1611080352843</updated>
+    </task>
+    <task id="LOCAL-00024" summary="add storage link and add errors pages">
+      <created>1611080386000</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1611080386000</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -466,7 +482,8 @@
     <MESSAGE value="refactoring README.md" />
     <MESSAGE value="refactoring checkbox and migrations" />
     <MESSAGE value="add requests, refactoring controllers, views" />
-    <option name="LAST_COMMIT_MESSAGE" value="add requests, refactoring controllers, views" />
+    <MESSAGE value="add storage link and add errors pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="add storage link and add errors pages" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
