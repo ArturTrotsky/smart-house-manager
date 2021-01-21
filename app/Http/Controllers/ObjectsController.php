@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ObjectsRequest;
+use App\Models\Objects;
 use App\Models\UserObject;
 use Illuminate\Support\Facades\Auth;
 
@@ -26,7 +27,8 @@ class ObjectsController extends Controller
      */
     public function create()
     {
-        return view('objects.create');
+        $objects = Objects::all()->sortBy('name');
+        return view('objects.create', compact('objects'));
     }
 
     /**

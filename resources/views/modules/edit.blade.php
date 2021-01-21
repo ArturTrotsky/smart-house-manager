@@ -22,6 +22,9 @@
                             </div>
                             <form method="POST" action="{{ route('modules.update', $module->id) }}">
                                 @csrf
+
+                                <input type="hidden" name="module_id" value="{{ $module->id }}">
+
                                 @method('PATCH')
                                 <div class="card-body">
                                     <div class="row">

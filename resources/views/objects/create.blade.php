@@ -55,23 +55,12 @@
                                                     style="width: 100%;"
                                                     name="name" type="text">
 
-                                                <!--TODO: Может создать таблицу objects?-->
-                                                <option disabled selected hidden>Select a Object</option>
-                                                <option>Bathroom</option>
-                                                <option>Bedroom</option>
-                                                <option>Boxroom</option>
-                                                <option>Cellar</option>
-                                                <option>Cloakroom</option>
-                                                <option>Dining-room</option>
-                                                <option>Games room</option>
-                                                <option>Garage</option>
-                                                <option>Hall</option>
-                                                <option>Kitchen</option>
-                                                <option>Laboratory</option>
-                                                <option>Living-room</option>
-                                                <option>Study room</option>
-                                                <option>Toilet</option>
-                                                <option>Utility room</option>
+                                                <option disabled selected>Select a Object name</option>
+                                                @foreach($objects as $object)
+                                                    <option
+                                                        value="{{ $object->name }}">{{ $object->name }}
+                                                    </option>
+                                                @endforeach
                                             </select>
 
                                         </div>

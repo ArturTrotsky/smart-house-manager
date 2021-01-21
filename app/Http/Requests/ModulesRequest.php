@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class ModulesRequest extends FormRequest
 {
@@ -23,12 +24,30 @@ class ModulesRequest extends FormRequest
      */
     public function rules()
     {
-        /*TODO: Настроить порт ip_adress и вилидацию name*/
         $rules = [
-            'name' => 'required|max:255|unique:modules,name,' . $this->request->get('id') . ',id,object_id,' . $this->request->get('object_id'),
             'module_type_id' => ['required', 'exists:module_types,id'],
             'ip_adress' => ['regex:/\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?):\d{1,5}\b/'],
         ];
+
+        if ($this->getMethod() == 'POST') { // store
+            $rules = [
+                'name' => ['required',
+                    Rule::unique('modules')->where(function ($query) {
+                        $query->where('object_id', $this->request->get('object_id'))->
+                        where('name', $this->request->get('name'));
+                    })
+                ],
+            ];
+        } else { // update /*TODO: надо разобраться*/
+            $rules = [
+                'name' => ['required',
+                    Rule::unique('modules')->where(function ($query) {
+                        $query->where('object_id', $this->request->get('object_id'))->
+                        where('name', $this->request->get('name'))->insertOrIgnore(['id' => $this->request->get('module_id')]);
+                    })
+                ],
+            ];
+        }
 
         return $rules;
     }

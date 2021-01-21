@@ -2,7 +2,7 @@
 if (!function_exists('generateIP')) {
     function generateIP(): string
     {
-        return rand(1, 999) . '.' . rand(1, 999) . '.' . rand(1, 999) . '.' .
-            rand(1, 999) . ':' . rand(1, 65535);
+        return rand(0, 255) . '.' . rand(0, 255) . '.' . rand(0, 255) . '.' .
+            rand(0, 255) . ':' . rand(1, 65535);
     }
 }

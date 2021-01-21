@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ca78f95-75d8-478c-94be-583e8ae6a4c9" name="Default Changelist" comment="add requests, refactoring controllers, views">
-      <change afterPath="$PROJECT_DIR$/public/css/project.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/jquery/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/jquery/jquery.min.js" afterDir="false" />
+    <list default="true" id="4ca78f95-75d8-478c-94be-583e8ae6a4c9" name="Default Changelist" comment="edit script connection">
+      <change afterPath="$PROJECT_DIR$/app/Models/Objects.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/ObjectsFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_21_174816_create_objects_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/ObjectNamesSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/how-i-make/.~lock.how i make project ubuntu.docx#" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f4a20931-7104-4214-9005-dd9f2a743e14.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f4a20931-7104-4214-9005-dd9f2a743e14.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/modules/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modules/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ObjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ObjectsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ModulesRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ModulesRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Support/Helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Support/Helpers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/modules/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modules/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/objects/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/objects/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/objects/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/objects/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/objects/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/objects/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/objects/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/objects/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,7 +234,9 @@
       <workItem from="1610741054550" duration="27860000" />
       <workItem from="1610986767560" duration="12411000" />
       <workItem from="1611077447532" duration="4488000" />
-      <workItem from="1611085705107" duration="3306000" />
+      <workItem from="1611085705107" duration="3400000" />
+      <workItem from="1611160970853" duration="12063000" />
+      <workItem from="1611245889814" duration="5114000" />
     </task>
     <task id="LOCAL-00001" summary="initial laravel &amp; bootstrap">
       <created>1609173840767</created>
@@ -402,7 +406,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611080386000</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="edit script connection">
+      <created>1611090959431</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1611090959431</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,7 +494,8 @@
     <MESSAGE value="refactoring checkbox and migrations" />
     <MESSAGE value="add requests, refactoring controllers, views" />
     <MESSAGE value="add storage link and add errors pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="add storage link and add errors pages" />
+    <MESSAGE value="edit script connection" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit script connection" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
