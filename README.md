@@ -36,65 +36,48 @@ Generate a new application key
 
     php artisan key:generate
 
-Run the database migrations (**Set the database connection in .env before migrating**)
+Create а database "smart_house_manager"
 
-    php artisan migrate
+    mysql -u root -p
+    > create database smart_house_manager;
+    > exit;
+
+Set the database connection in .env
+
+    APP_NAME=
+    APP_URL=
+    DB_CONNECTION=
+    DB_HOST=
+    DB_PORT=
+    DB_DATABASE=
+    DB_USERNAME=
+    DB_PASSWORD=
+
+Run the database migrations and run all database seeds
+
+    php artisan migrate:refresh --seed
+
+NPM install
+
+    npm install
+
+Create a symbolic link
+
+    php artisan storage:link
+
+Set the mail connection in .env
+
+    MAIL_DRIVER=
+    MAIL_HOST=
+    MAIL_PORT=
+    MAIL_USERNAME=
+    MAIL_PASSWORD=
+    MAIL_ENCRYPTION=
+    MAIL_FROM_ADDRESS=
+    MAIL_FROM_NAME=
 
 Start the local development server
 
     php artisan serve
 
 You can now access the server at http://localhost:8000
-
-**TL;DR command list**
-
-    git clone git@github.com:ArturTrotsky/smart-house-manager.git
-    cd smart-house-manager
-    composer install
-    cp .env.example .env
-    php artisan key:generate
-
-**Make sure you set the correct database connection information before running the migrations** [Environment variables](#environment-variables)
-
-    php artisan migrate
-    php artisan serve
-
-## Database seeding
-
-**Populate the database with seed data with relationships which includes users, objects, module types, modules. This can help you to quickly couple a frontend and start using it with ready content.**
-
-Run the database seeder and you're done
-
-    php artisan db:seed
-
-***Note*** : It's recommended to have a clean database before seeding. You can refresh your migrations at any point to clean the database by running the following command
-
-    php artisan migrate:refresh
-
-## Docker
-
-To install with [Docker](https://www.docker.com), run following commands:
-
-```
-git clone git@github.com:ArturTrotsky/smart-house-manager.git
-cd smart-house-manager
-cp .env.example.docker .env
-docker run -v $(pwd):/app composer install
-cd ./docker
-docker-compose up -d
-docker-compose exec php php artisan key:generate
-docker-compose exec php php artisan jwt:generate
-docker-compose exec php php artisan migrate
-docker-compose exec php php artisan db:seed
-docker-compose exec php php artisan serve --host=0.0.0.0
-```
-
-The api can be accessed at [http://localhost:8000/api](http://localhost:8000/api).
-
-## Environment variables
-
-- `.env` - Environment variables can be set in this file
-
-***Note*** : You can quickly set the database information and other variables in this file and have the application fully working.
-
-----------

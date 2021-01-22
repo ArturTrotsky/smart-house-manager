@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ca78f95-75d8-478c-94be-583e8ae6a4c9" name="Default Changelist" comment="edit script connection">
-      <change afterPath="$PROJECT_DIR$/app/Models/Objects.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/ObjectsFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_21_174816_create_objects_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/ObjectNamesSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/how-i-make/.~lock.how i make project ubuntu.docx#" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f4a20931-7104-4214-9005-dd9f2a743e14.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f4a20931-7104-4214-9005-dd9f2a743e14.xml" afterDir="false" />
+    <list default="true" id="4ca78f95-75d8-478c-94be-583e8ae6a4c9" name="Default Changelist" comment="edit ObjectNames">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ObjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ObjectsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ModulesRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ModulesRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Support/Helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Support/Helpers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/modules/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modules/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/objects/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/objects/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,10 +155,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/node_modules/bootstrap/scss/_tables.scss" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/svg" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -197,6 +185,7 @@
   <component name="SvnConfiguration">
     <configuration>$USER_HOME$/.subversion</configuration>
     <option name="sshConnectionType" value="PRIVATE_KEY" />
+    <option name="sshPrivateKeyPath" value="$USER_HOME$/Dropbox/keys/github" />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -236,7 +225,8 @@
       <workItem from="1611077447532" duration="4488000" />
       <workItem from="1611085705107" duration="3400000" />
       <workItem from="1611160970853" duration="12063000" />
-      <workItem from="1611245889814" duration="5114000" />
+      <workItem from="1611245889814" duration="9738000" />
+      <workItem from="1611335383705" duration="2166000" />
     </task>
     <task id="LOCAL-00001" summary="initial laravel &amp; bootstrap">
       <created>1609173840767</created>
@@ -413,7 +403,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611090959431</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="edit ObjectNames">
+      <created>1611254667982</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1611254667982</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,7 +492,8 @@
     <MESSAGE value="add requests, refactoring controllers, views" />
     <MESSAGE value="add storage link and add errors pages" />
     <MESSAGE value="edit script connection" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit script connection" />
+    <MESSAGE value="edit ObjectNames" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit ObjectNames" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
