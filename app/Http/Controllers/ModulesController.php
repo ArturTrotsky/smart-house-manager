@@ -4,11 +4,29 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ModulesRequest;
 use App\Models\ModuleParams;
-use App\Models\Modules;
-use App\Models\ModuleTypes;
+use App\Services\ModuleParamsService;
+use App\Services\ModulesService;
+use App\Services\ModuleTypesService;
+use App\Services\SchedulersService;
+use App\Services\UserObjectService;
 
 class ModulesController extends Controller
 {
+    public function __construct(
+        ModuleTypesService $moduleTypes,
+        UserObjectService $objects,
+        ModulesService $modules,
+        ModuleParamsService $moduleParams,
+        SchedulersService $schedulers
+    )
+    {
+        $this->moduleTypes = $moduleTypes;
+        $this->objects = $objects;
+        $this->modules = $modules;
+        $this->moduleParams = $moduleParams;
+        $this->schedulers = $schedulers;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -24,11 +42,12 @@ class ModulesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($object_id)
+    public function create($objectId)
     {
-        $moduleTypes = ModuleTypes::all()->sortBy('name');
-
-        return view('modules.create', compact('moduleTypes', 'object_id'));
+        return view('modules.create', [
+            'moduleTypes' => $this->moduleTypes->all(),
+            'object' => $this->objects->findById($objectId)
+        ]);
     }
 
     /**
@@ -39,20 +58,20 @@ class ModulesController extends Controller
      */
     public function store(ModulesRequest $request)
     {
-        $module = new Modules([
+        $module = $this->modules->create([
             'module_type_id' => $request->input('module_type_id'),
             'object_id' => $request->input('object_id'),
             'name' => $request->input('name'),
             'ip_adress' => $request->input('ip_adress'),
         ]);
-        $module->save();
 
-        $moduleParams = new ModuleParams([
+        $this->moduleParams->create([
             'module_id' => $module->id,
         ]);
-        $moduleParams->save();
 
-        return redirect("/objects/{$module->object_id}")
+        $object = $this->objects->findById($module->object_id);
+
+        return redirect()->route('objects.show', $object)
             ->with('success', "You have successfully added a " . $module->name . " module");
     }
 
@@ -64,7 +83,13 @@ class ModulesController extends Controller
      */
     public function show($id)
     {
-        //
+        $module = $this->modules->findById($id);
+        $scheduler = $this->schedulers->findByModuleId($module->id);
+
+        /*TODO: Переделать на сервисы-репозитории*/
+        $moduleParams = ModuleParams::withTrashed()->where('module_id', $id)->get();
+
+        return view('modules.show', compact('module', 'scheduler', 'moduleParams'));
     }
 
     /**
@@ -75,10 +100,10 @@ class ModulesController extends Controller
      */
     public function edit($id)
     {
-        $module = Modules::find($id);
-        $moduleTypes = ModuleTypes::all()->sortBy('name');
-
-        return view('modules.edit', compact('module', 'moduleTypes'));
+        return view('modules.edit', [
+            'module' => $this->modules->findById($id),
+            'moduleTypes' => $this->moduleTypes->all()
+        ]);
     }
 
     /**
@@ -90,13 +115,14 @@ class ModulesController extends Controller
      */
     public function update(ModulesRequest $request, $id)
     {
-        $module = Modules::find($id);
-        $module->module_type_id = $request->input('module_type_id');
-        $module->name = $request->input('name');
-        $module->ip_adress = $request->input('ip_adress');
-        $module->save();
+        $module = $this->modules->update($id, [
+            'module_type_id' => $request->input('module_type_id'),
+            'name' => $request->input('name'),
+            'ip_adress' => $request->input('ip_adress'),
+        ]);
 
-        return redirect("/objects/{$module->object_id}")->with('success', "You have successfully updated the " . $module->name . " module");
+        return redirect()->route('modules.show', $module->id)
+            ->with('success', "You have successfully updated the " . $module->name . " module");
     }
 
     /**
@@ -107,10 +133,12 @@ class ModulesController extends Controller
      */
     public function destroy($id)
     {
-        $module = Modules::find($id);
-        $objectId = $module->object_id;
-        $module->delete();
+        $module = $this->modules->findById($id);
+        $objectId = $module->object->id;
 
-        return redirect("/objects/$objectId")->with('success', 'Object deleted!');
+        $this->modules->destroy($id);
+
+        return redirect()->route('objects.show', $objectId)
+            ->with('success', 'Module deleted!');
     }
 }

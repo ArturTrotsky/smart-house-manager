@@ -28,7 +28,6 @@ class ChangeFieldsToModuleParamsTable extends Migration
     {
         Schema::table('module_params', function (Blueprint $table) {
             $table->integer('value')->change();
-            $table->dropColumn('status');
         });
     }
 }

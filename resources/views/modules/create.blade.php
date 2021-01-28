@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', 'Add Module')
+@section('title', 'Create Module')
 
 @section('content')
     <div class="content-wrapper">
@@ -17,12 +17,12 @@
                     <div class="col-md-12">
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Create new Module</h3>
+                                <h3 class="card-title"><b>Create Module in {{$object->name}} Object</b></h3>
                             </div>
                             <form method="POST" action="{{ route('modules.store') }}">
                                 @csrf
 
-                                <input type="hidden" name="object_id" value="{{ $object_id }}">
+                                <input type="hidden" name="object_id" value="{{ $object->id }}">
 
                                 <div class="card-body">
                                     <div class="row">
@@ -98,8 +98,8 @@
                                 <div class="card-footer">
                                     <div class="row">
                                         <div class="col-md-auto">
-                                            <a href="{{ route('objects.show', $object_id) }}"
-                                               class="btn btn-danger">Back</a>
+                                            <a href="{{ route('objects.show', $object->id) }}"
+                                               class="btn btn-danger">Cancel</a>
                                         </div>
                                         <div class="col-md-auto">
                                             <button type="submit" class="btn btn-success">Save</button>

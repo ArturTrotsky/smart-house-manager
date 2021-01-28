@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-success mb-3">
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
 
     <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">

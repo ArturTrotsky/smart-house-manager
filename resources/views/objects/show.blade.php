@@ -1,22 +1,20 @@
 @extends('layouts.layout')
 
-@section('title', 'Modules list')
+@section('title', 'My Modules')
 
 @section('content')
-
     @if(!$object->modules->isEmpty())
         <div class="content-wrapper">
             <section class="content-header">
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>List of {{ $object->name }} modules</h1>
+                            <h1><b>My Modules at {{ $object->name }} Object</b></h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <a href="{{ route('modules.create', ['object_id' => $object->id]) }}"
-                                   style="float: right;" class="btn btn-success">Add
-                                    Module</a>
+                                   style="float: right;" class="btn btn-success">Create Module</a>
                             </ol>
                         </div>
                     </div>
@@ -37,10 +35,9 @@
                             <table class="table table-my">
                                 <thead>
                                 <tr>
-                                    <th scope="col">ID</th>
                                     <th scope="col">Name</th>
                                     <th scope="col">Type</th>
-                                    <th scope="col">IP Address</th>
+                                    <th scope="col">Current status</th>
                                     <th scope="col" class="table-buttons">Action</th>
                                 </tr>
                                 </thead>
@@ -48,15 +45,14 @@
 
                                 @foreach($object->modules as $module)
                                     <tr>
-                                        <td>{{ $module->id }}</td>
                                         <td>{{ $module->name }}</td>
                                         <td>{{ $module->type->name }}</td>
-                                        <td>{{ $module->ip_adress }}</td>
+                                        <td>{{ $module->getCurrentParams->value }} {{ $module->type->unit }}</td>
 
                                         <td class="table-buttons">
-                                            <a href="{{ route('modules.edit', $module->id) }}"
-                                               class="btn btn-primary" title="Edit Module">
-                                                <i class="fa fa-pencil"></i>
+                                            <a href="{{ route('modules.show', $module->id) }}"
+                                               class="btn btn-primary" title="Show Module">
+                                                <i class="fa fa-eye"></i>
                                             </a>
                                             <form method="POST" action="{{ route('modules.destroy', $module->id) }}">
                                                 @csrf
@@ -88,7 +84,7 @@
                         <div class="col-sm-2">
                             <ol class="breadcrumb float-sm-right">
                                 <a href="{{ route('objects.index') }}"
-                                   class="btn btn-success">Back</a>
+                                   class="btn btn-success">Cancel</a>
                             </ol>
                         </div>
                         <div class="col-sm-2">

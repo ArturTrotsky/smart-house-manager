@@ -3,12 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ObjectsRequest;
-use App\Models\Objects;
-use App\Models\UserObject;
+use App\Services\ObjectsService;
+use App\Services\UserObjectService;
 use Illuminate\Support\Facades\Auth;
 
 class ObjectsController extends Controller
 {
+    public function __construct(UserObjectService $userObjects, ObjectsService $objects)
+    {
+        $this->userObjects = $userObjects;
+        $this->objects = $objects;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -16,8 +22,9 @@ class ObjectsController extends Controller
      */
     public function index()
     {
-        $objects = UserObject::all()->sortBy('name');
-        return view('objects.index', compact('objects'));
+        return view('objects.index', [
+            'objects' => $this->userObjects->all()
+        ]);
     }
 
     /**
@@ -27,8 +34,9 @@ class ObjectsController extends Controller
      */
     public function create()
     {
-        $objects = Objects::all()->sortBy('name');
-        return view('objects.create', compact('objects'));
+        return view('objects.create', [
+            'objects' => $this->objects->all()
+        ]);
     }
 
     /**
@@ -39,13 +47,13 @@ class ObjectsController extends Controller
      */
     public function store(ObjectsRequest $request)
     {
-        $object = new UserObject([
+        $userObject = $this->userObjects->create([
             'name' => $request->input('name'),
             'user_id' => Auth::id()
         ]);
-        $object->save();
 
-        return redirect('/objects')->with('success', "You have successfully added a " . $object->name . " object");
+        return redirect()->route('objects.index')
+            ->with('success', "You have successfully added a " . $userObject->name . " object");
     }
 
     /**
@@ -56,9 +64,9 @@ class ObjectsController extends Controller
      */
     public function show($id)
     {
-        $object = UserObject::find($id);
-
-        return view('objects.show', compact('object'));
+        return view('objects.show', [
+            'object' => $this->userObjects->findById($id)
+        ]);
     }
 
     /**
@@ -69,9 +77,9 @@ class ObjectsController extends Controller
      */
     public function edit($id)
     {
-        $object = UserObject::find($id);
-
-        return view('objects.edit', compact('object'));
+        return view('objects.edit', [
+            'object' => $this->userObjects->findById($id)
+        ]);
     }
 
     /**
@@ -83,10 +91,13 @@ class ObjectsController extends Controller
      */
     public function update(ObjectsRequest $request, $id)
     {
-        $object = UserObject::find($id);
-        $object->update(['name' => $request->input('name')]);
+        $userObject = $this->userObjects->findById($id);
+        $userObject->update(
+            ['name' => $request->input('name')]
+        );
 
-        return redirect('/objects')->with('success', "You have successfully updated the " . $object->name . " object");
+        return redirect()->route('objects.index')
+            ->with('success', "You have successfully updated the " . $userObject->name . " object");
     }
 
     /**
@@ -97,9 +108,9 @@ class ObjectsController extends Controller
      */
     public function destroy($id)
     {
-        $object = UserObject::find($id);
-        $object->delete();
+        $this->userObjects->destroy($id);
 
-        return redirect('/objects')->with('success', 'Object deleted!');
+        return redirect()->route('objects.index')
+            ->with('success', 'Object deleted!');
     }
 }

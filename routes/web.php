@@ -3,6 +3,7 @@
 use App\Http\Controllers\ModulesController;
 use App\Http\Controllers\ModuleTypesController;
 use App\Http\Controllers\ObjectsController;
+use App\Http\Controllers\SchedulerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,6 +31,9 @@ Auth::routes(['verify' => true]);
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('/objects', ObjectsController::class);
     Route::resource('/modules', ModulesController::class)->except(['create']);
-    Route::get('/object/{object_id}/modules/create', [ModulesController::class, 'create'])->name('modules.create');
+    Route::get('/modules/create/{object_id}', [ModulesController::class, 'create'])->name('modules.create');
+    Route::resource('/schedulers', SchedulerController::class)->except(['create']);
+    Route::get('/schedulers/create/{module}', [SchedulerController::class, 'create'])->name('schedulers.create');
+
     Route::resource('/module_types', ModuleTypesController::class);
 });
