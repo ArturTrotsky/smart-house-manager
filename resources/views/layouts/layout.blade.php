@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{ asset('plugins/select2/css/select2.min.css') }}">
     <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/v4-shims.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
     <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style-my.css') }}">
     <!-- Fonts -->
@@ -38,7 +39,7 @@
 
 <script>
     $(document).ready(function () {
-        $('.alert-success').fadeOut(2400);
+        $('.alert-success').fadeOut(3600);
     });
 </script>
 

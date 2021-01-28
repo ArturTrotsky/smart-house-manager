@@ -17,7 +17,7 @@ class ModuleTypesFactory extends Factory
     protected $name = ['Light', 'Ventilation', 'Heating', 'Water Heating', 'Television',
         'Door lock', 'Radio', 'Video camera', 'Security alarm'];
 
-    protected $unit = ['%', '%', '°C', '°C', 'off', 'on', 'off', 'off', 'on'];
+    protected $unit = ['%', '%', '°C', '°C', 'on\off', 'on\off', 'on\off', 'on\off', 'on\off'];
 
     protected $i = -1;
 

@@ -18,7 +18,7 @@
     </script>
 @endsection
 
-@section('title', 'Add Object')
+@section('title', 'Create Object')
 
 @section('content')
     <div class="content-wrapper">
@@ -35,7 +35,7 @@
                     <div class="col-md-12">
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Creating new Object</h3>
+                                <h3 class="card-title"><b>Create Object</b></h3>
                             </div>
                             <form method="POST" action="{{ route('objects.store') }}">
                                 @csrf
@@ -83,7 +83,7 @@
                                     <div class="row">
                                         <div class="col-md-auto">
                                             <a href="{{ route('objects.index') }}"
-                                               class="btn btn-danger">Back</a>
+                                               class="btn btn-danger">Cancel</a>
                                         </div>
                                         <div class="col-md-auto">
                                             <button type="submit" class="btn btn-success">Save</button>

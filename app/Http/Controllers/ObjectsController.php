@@ -45,7 +45,7 @@ class ObjectsController extends Controller
         ]);
         $object->save();
 
-        return redirect('/objects')->with('success', "You have successfully added a " . $object->name . " object");
+        return redirect()->route('objects.index')->with('success', "You have successfully added a " . $object->name . " object");
     }
 
     /**
@@ -86,7 +86,7 @@ class ObjectsController extends Controller
         $object = UserObject::find($id);
         $object->update(['name' => $request->input('name')]);
 
-        return redirect('/objects')->with('success', "You have successfully updated the " . $object->name . " object");
+        return redirect()->route('objects.index')->with('success', "You have successfully updated the " . $object->name . " object");
     }
 
     /**
@@ -100,6 +100,6 @@ class ObjectsController extends Controller
         $object = UserObject::find($id);
         $object->delete();
 
-        return redirect('/objects')->with('success', 'Object deleted!');
+        return redirect()->route('objects.index')->with('success', 'Object deleted!');
     }
 }

@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', 'Edit ' . $object->name)
+@section('title', 'Edit Object')
 
 @section('content')
 
@@ -18,7 +18,7 @@
                     <div class="col-md-12">
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Edit {{ $object->name }} Object</h3>
+                                <h3 class="card-title"><b>Edit {{ $object->name }} Object</b></h3>
                             </div>
                             <form method="POST" action="{{ route('objects.update', $object->id) }}">
                                 @csrf

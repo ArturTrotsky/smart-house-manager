@@ -6,6 +6,8 @@ use App\Http\Requests\ModulesRequest;
 use App\Models\ModuleParams;
 use App\Models\Modules;
 use App\Models\ModuleTypes;
+use App\Models\Schedulers;
+use App\Models\UserObject;
 
 class ModulesController extends Controller
 {
@@ -27,8 +29,9 @@ class ModulesController extends Controller
     public function create($object_id)
     {
         $moduleTypes = ModuleTypes::all()->sortBy('name');
+        $object = UserObject::find($object_id);
 
-        return view('modules.create', compact('moduleTypes', 'object_id'));
+        return view('modules.create', compact('moduleTypes', 'object'));
     }
 
     /**
@@ -52,7 +55,7 @@ class ModulesController extends Controller
         ]);
         $moduleParams->save();
 
-        return redirect("/objects/{$module->object_id}")
+        return redirect()->route('modules.show', $module->id)
             ->with('success', "You have successfully added a " . $module->name . " module");
     }
 
@@ -64,7 +67,11 @@ class ModulesController extends Controller
      */
     public function show($id)
     {
-        //
+        $module = Modules::find($id);
+        $scheduler = Schedulers::where('module_id', $module->id)->first();
+        $moduleParams = ModuleParams::withTrashed()->where('module_id', $id)->get();
+
+        return view('modules.show', compact('module', 'scheduler', 'moduleParams'));
     }
 
     /**
@@ -96,7 +103,7 @@ class ModulesController extends Controller
         $module->ip_adress = $request->input('ip_adress');
         $module->save();
 
-        return redirect("/objects/{$module->object_id}")->with('success', "You have successfully updated the " . $module->name . " module");
+        return redirect()->route('modules.show', $module->id)->with('success', "You have successfully updated the " . $module->name . " module");
     }
 
     /**
@@ -111,6 +118,6 @@ class ModulesController extends Controller
         $objectId = $module->object_id;
         $module->delete();
 
-        return redirect("/objects/$objectId")->with('success', 'Object deleted!');
+        return redirect()->route('objects.show', $objectId)->with('success', 'Module deleted!');
     }
 }

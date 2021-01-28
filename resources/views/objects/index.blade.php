@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', 'Object list')
+@section('title', 'My Objects')
 
 @section('content')
 
@@ -10,12 +10,11 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Object list</h1>
+                            <h1><b>My Objects</b></h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <a href="{{ route('objects.create') }}" style="float: right;" class="btn btn-success">Create
-                                    New Object</a>
+                                <a href="{{ route('objects.create') }}" style="float: right;" class="btn btn-success">Create New</a>
                             </ol>
                         </div>
                     </div>

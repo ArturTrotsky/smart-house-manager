@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', 'Edit ' . $module->name)
+@section('title', 'Edit Module')
 
 @section('content')
 
@@ -18,7 +18,7 @@
                     <div class="col-md-12">
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Edit {{ $module->getObject()->name }} Module</h3>
+                                <h3 class="card-title"><b>Edit {{ $module->object->name }} Module</b></h3>
                             </div>
                             <form method="POST" action="{{ route('modules.update', $module->id) }}">
                                 @csrf
@@ -99,10 +99,10 @@
                                     <div class="row">
                                         <div class="col-md-auto">
                                             <a href="{{ route('objects.show', $module->object_id) }}"
-                                               class="btn btn-danger">Back</a>
+                                               class="btn btn-danger">Cancel</a>
                                         </div>
                                         <div class="col-md-auto">
-                                            <button type="submit" class="btn btn-success">Edit</button>
+                                            <button type="submit" class="btn btn-success">Save</button>
                                         </div>
                                     </div>
                                 </div>
