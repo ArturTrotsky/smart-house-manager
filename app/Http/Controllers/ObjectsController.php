@@ -91,10 +91,10 @@ class ObjectsController extends Controller
      */
     public function update(ObjectsRequest $request, $id)
     {
-        $userObject = $this->userObjects->findById($id);
-        $userObject->update(
+        $this->userObjects->update(
             ['name' => $request->input('name')]
         );
+        $userObject = $this->userObjects->findById($id);
 
         return redirect()->route('objects.index')
             ->with('success', "You have successfully updated the " . $userObject->name . " object");

@@ -34,6 +34,4 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/modules/create/{object_id}', [ModulesController::class, 'create'])->name('modules.create');
     Route::resource('/schedulers', SchedulerController::class)->except(['create']);
     Route::get('/schedulers/create/{module}', [SchedulerController::class, 'create'])->name('schedulers.create');
-
-    Route::resource('/module_types', ModuleTypesController::class);
 });

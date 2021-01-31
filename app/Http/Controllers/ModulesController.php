@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ModulesRequest;
+use App\Http\Requests\ModulesStoreRequest;
+use App\Http\Requests\ModulesUpdateRequest;
 use App\Models\ModuleParams;
+use App\Models\Modules;
 use App\Services\ModuleParamsService;
 use App\Services\ModulesService;
 use App\Services\ModuleTypesService;
@@ -56,7 +58,7 @@ class ModulesController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ModulesRequest $request)
+    public function store(ModulesStoreRequest $request)
     {
         $module = $this->modules->create([
             'module_type_id' => $request->input('module_type_id'),
@@ -113,9 +115,9 @@ class ModulesController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ModulesRequest $request, $id)
+    public function update(ModulesUpdateRequest $request, Modules $module)
     {
-        $module = $this->modules->update($id, [
+        $this->modules->update($module->id, [
             'module_type_id' => $request->input('module_type_id'),
             'name' => $request->input('name'),
             'ip_adress' => $request->input('ip_adress'),

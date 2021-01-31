@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ca78f95-75d8-478c-94be-583e8ae6a4c9" name="Default Changelist" comment="big refactoring">
+    <list default="true" id="4ca78f95-75d8-478c-94be-583e8ae6a4c9" name="Default Changelist" comment="use repositories and services in controllers">
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/ModulesUpdateRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/how-i-make/.~lock.how i make project ubuntu.docx#" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ModuleParamsController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ModuleTypesController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ModulesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ModulesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ObjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ObjectsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SchedulerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SchedulerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/BaseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/BaseRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/SchedulersRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/SchedulersRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/BaseService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/BaseService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/SchedulersService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/SchedulersService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/objects/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/objects/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/objects/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/objects/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ModulesRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ModulesStoreRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_14_105034_add_unique_key_to_modules_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/route.txt" beforeDir="false" afterPath="$PROJECT_DIR$/route.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +31,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -251,6 +248,7 @@
       <workItem from="1611337609173" duration="52100000" />
       <workItem from="1611517647925" duration="36848000" />
       <workItem from="1611769406925" duration="36722000" />
+      <workItem from="1612042803117" duration="12268000" />
     </task>
     <task id="LOCAL-00001" summary="initial laravel &amp; bootstrap">
       <created>1609173840767</created>
