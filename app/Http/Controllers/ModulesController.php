@@ -88,10 +88,10 @@ class ModulesController extends Controller
         $module = $this->modules->findById($id);
         $scheduler = $this->schedulers->findByModuleId($module->id);
 
-        /*TODO: Переделать на сервисы-репозитории*/
-        $moduleParams = ModuleParams::withTrashed()->where('module_id', $id)->get();
+        $dataForChart = $this->moduleParams->getDataForCharts($id);
 
-        return view('modules.show', compact('module', 'scheduler', 'moduleParams'));
+        return view('modules.show',
+            compact('module', 'scheduler', 'dataForChart'));
     }
 
     /**

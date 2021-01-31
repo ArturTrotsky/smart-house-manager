@@ -143,7 +143,7 @@
                                 </tbody>
                             </table>
 
-                            @endif
+                        @endif
                     </div>
                 </div>
             </div>
@@ -153,8 +153,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <br>
-                    <h3>History values</h3>
-                    <div id="myfirstchart"></div>
+                    <h3>Module parameter change history</h3>
+                    <div id="moduleParamsChart"></div>
                 </div>
             </div>
             <div class="row">
@@ -167,38 +167,28 @@
 
     </div>
 
-    @endsection
+@endsection
 
+@section('post-script')
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 
-@dump($arr = [['year' => '2008', 'value' => 20], ['year' => '2009', 'value' => 23],
-    ['year' => '2010', 'value' => 10], ['year' => '2011', 'value' => 28]])
-
-    @section('post-script')
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
-
-        <script>
-            new Morris.Line({
-                // ID of the element in which to draw the chart.
-                element: 'myfirstchart',
-                // Chart data records -- each entry in this array corresponds to a point on
-                // the chart.
-                data: <?php echo json_encode($arr); ?>/*[
-                    {year: '2008', value: 20},
-                    {year: '2009', value: 10},
-                    {year: '2010', value: 5},
-                    {year: '2011', value: 5},
-                    {year: '2012', value: 20}
-                ]*/,
-                // The name of the data record attribute that contains x-values.
-                xkey: 'year',
-                // A list of names of data record attributes that contain y-values.
-                ykeys: ['value'],
-                // Labels for the ykeys -- will be displayed when you hover over the
-                // chart.
-                labels: ['Value']
-            });
-        </script>
-    @endsection
+    <script>
+        new Morris.Line({
+            // ID of the element in which to draw the chart.
+            element: 'moduleParamsChart',
+            // Chart data records -- each entry in this array corresponds to a point on
+            // the chart.
+            data: <?php echo json_encode($dataForChart); ?>,
+            // The name of the data record attribute that contains x-values.
+            xkey: 'date',
+            // A list of names of data record attributes that contain y-values.
+            ykeys: ['value'],
+            // Labels for the ykeys -- will be displayed when you hover over the
+            // chart.
+            labels: ['Value'],
+        });
+    </script>
+@endsection

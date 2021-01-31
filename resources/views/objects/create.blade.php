@@ -65,7 +65,7 @@
 
                                         </div>
 
-                                        <input type="text" name="name" value="{{ old('name') }}"
+                                        <input type="text" name="name" value="{{ old('name') ?? '' }}"
                                                placeholder="Enter a Object"
                                                class="form-control @error('name') is-invalid @enderror"
                                                id="object-name-input" style="display: none">

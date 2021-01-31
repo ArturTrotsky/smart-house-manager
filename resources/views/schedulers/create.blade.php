@@ -36,7 +36,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="object-name" class="form-label">Value</label>
-                                                <input type="text" name="value" value="{{ old('value') }}"
+                                                <input type="text" name="value" value="{{ old('value') ?? '' }}"
                                                        placeholder="Enter value"
                                                        class="form-control @error('value') is-invalid @enderror"
                                                        id="object-name">
@@ -68,7 +68,7 @@
 
                                                     <div class="input-group date" id="timepicker_on"
                                                          data-target-input="nearest">
-                                                        <input type="text" name="on_time" value="{{ old('on_time') }}"
+                                                        <input type="text" name="on_time" value="{{ old('on_time') ?? '' }}"
                                                                data-target="#timepicker_on"
                                                                placeholder="Enter the time of module activation"
                                                                class="form-control datetimepicker-input
@@ -96,7 +96,7 @@
 
                                                     <div class="input-group date" id="timepicker_off"
                                                          data-target-input="nearest">
-                                                        <input type="text" name="off_time" value="{{ old('off_time') }}"
+                                                        <input type="text" name="off_time" value="{{ old('off_time') ?? '' }}"
                                                                data-target="#timepicker_off"
                                                                placeholder="Enter the time the module deactivation"
                                                                class="form-control datetimepicker-input
@@ -132,7 +132,6 @@
                                                     <option disabled selected>Select a period</option>
                                                     <option value="every_day">Every day</option>
                                                     <option value="every_week">Every week</option>
-                                                    <option value="every_hour">Every hour</option>
                                                     <option value="every_work_day">Every work day</option>
                                                     <option value="weekend">Every weekend</option>
                                                 </select>

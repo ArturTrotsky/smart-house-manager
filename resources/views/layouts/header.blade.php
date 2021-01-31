@@ -4,12 +4,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav text-primary">
                 <li class="nav-item active">
-                    <a><b>SMART HOUSE MANAGER</b></a>
+                    <a href="{{url('/')}}"
+                       style="color: #0b3e6f; text-decoration: none; cursor: pointer"><b>SMART HOUSE MANAGER</b></a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ route('objects.index') }}">OBJECTS <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{ route('objects.index') }}">MY OBJECTS <span
+                            class="sr-only">(current)</span></a>
                 </li>
             </ul>
 

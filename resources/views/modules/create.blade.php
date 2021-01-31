@@ -29,7 +29,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="object-name" class="form-label">Name</label>
-                                                <input type="text" name="name" value="{{ old('name') }}"
+                                                <input type="text" name="name" value="{{ old('name') ?? '' }}"
                                                        placeholder="Enter a module name"
                                                        class="form-control @error('name') is-invalid @enderror"
                                                        id="object-name">
@@ -56,6 +56,9 @@
                                                     <option disabled selected>Select a module type</option>
                                                     @foreach($moduleTypes as $type)
                                                         <option
+                                                            @if(old('module_type_id') == $type->id)
+                                                            selected
+                                                            @endif
                                                             value="{{ $type->id }}">{{ $type->name }}
                                                         </option>
                                                     @endforeach

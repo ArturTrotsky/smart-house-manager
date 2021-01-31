@@ -57,8 +57,12 @@
                                                         type="text">
                                                     @foreach($moduleTypes as $type)
                                                         <option
-                                                            @if($module->type->id == $type->id) selected @endif
-                                                        value="{{ $type->id }}">{{ $type->name }}
+                                                            @if(old('module_type_id') && $type->module_type_id == old('module_type_id'))
+                                                            selected
+                                                            @elseif(empty(old('module_type_id')) && $type->module_type_id === $module->module_type_id)
+                                                            selected
+                                                            @endif
+                                                            value="{{ $type->id }}">{{ $type->name }}
                                                         </option>
                                                     @endforeach
                                                 </select>
