@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ca78f95-75d8-478c-94be-583e8ae6a4c9" name="Default Changelist" comment="edit Request">
+    <list default="true" id="4ca78f95-75d8-478c-94be-583e8ae6a4c9" name="Default Changelist" comment="add charts js">
       <change afterPath="$PROJECT_DIR$/how-i-make/.~lock.task.docx#" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ModulesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ModulesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/ModuleParamsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/ModuleParamsRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ObjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ObjectsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/ModuleParamsService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/ModuleParamsService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/how-i-make/.~lock.how i make project ubuntu.docx#" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/how-i-make/how i make project ubuntu.docx" beforeDir="false" afterPath="$PROJECT_DIR$/how-i-make/how i make project ubuntu.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/modules/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modules/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/modules/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modules/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/modules/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modules/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/objects/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/objects/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/schedulers/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/schedulers/create.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +244,8 @@
       <workItem from="1611337609173" duration="52100000" />
       <workItem from="1611517647925" duration="36848000" />
       <workItem from="1611769406925" duration="36722000" />
-      <workItem from="1612042803117" duration="31623000" />
+      <workItem from="1612042803117" duration="34377000" />
+      <workItem from="1612199179894" duration="3611000" />
     </task>
     <task id="LOCAL-00001" summary="initial laravel &amp; bootstrap">
       <created>1609173840767</created>
@@ -457,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612092106326</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="add charts js">
+      <created>1612122073595</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1612122073595</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -543,7 +543,8 @@
     <MESSAGE value="edit README.md" />
     <MESSAGE value="big refactoring" />
     <MESSAGE value="edit Request" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit Request" />
+    <MESSAGE value="add charts js" />
+    <option name="LAST_COMMIT_MESSAGE" value="add charts js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

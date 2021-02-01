@@ -1,5 +1,12 @@
 @extends('layouts.layout')
 
+@section('pre-css')
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
+@endsection
+
 @section('title', 'Show Module')
 
 @section('content')
@@ -154,7 +161,13 @@
                 <div class="col-md-12">
                     <br>
                     <h3>Module parameter change history</h3>
+                    <form name="test" method="get" action="/">
+                    <input type="text" name="datetimes" />
+                        <input type="submit" value="Show">
+                    </form>
+
                     <div id="moduleParamsChart"></div>
+
                 </div>
             </div>
             <div class="row">
@@ -174,7 +187,18 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
-
+    <script>
+        $(function() {
+            $('input[name="datetimes"]').daterangepicker({
+                timePicker: true,
+                startDate: moment().startOf('day'),
+                endDate: moment(),
+                locale: {
+                    format: 'M/DD hh:mm A'
+                }
+            });
+        });
+    </script>
     <script>
         new Morris.Line({
             // ID of the element in which to draw the chart.

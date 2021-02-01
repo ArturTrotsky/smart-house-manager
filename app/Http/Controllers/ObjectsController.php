@@ -92,6 +92,7 @@ class ObjectsController extends Controller
     public function update(ObjectsRequest $request, $id)
     {
         $this->userObjects->update(
+            $id,
             ['name' => $request->input('name')]
         );
         $userObject = $this->userObjects->findById($id);

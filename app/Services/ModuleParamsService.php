@@ -28,6 +28,10 @@ class ModuleParamsService extends BaseService
         foreach ($moduleParams as $key => $item) {
             $data[$key]['value'] = $item->value;
             $data[$key]['date'] = $item->created_at->format('Y-m-d H:i:s');
+            if ($key == count($moduleParams) - 1) {
+                $data[count($moduleParams)]['value'] = $item->value;
+                $data[count($moduleParams)]['date'] = now()->format('Y-m-d H:i:s');
+            }
         }
 
         /* for ($i = 0; $i < count($data); $i++) {
