@@ -21,7 +21,6 @@ class Schedulers extends Model
         'off_time',
         'every_day',
         'every_week',
-        'every_hour',
         'every_work_day',
         'weekend',
     ];

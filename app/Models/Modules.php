@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Auth;
 
 class Modules extends Model
 {
@@ -20,6 +21,17 @@ class Modules extends Model
     ];
 
     public $timestamp = true;
+
+    /**
+     * Scope a query to only include authenticated user.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeCurrentUserModule($query)
+    {
+        $query->where('object_id', UserObject::where('user_id',Auth::id())->value('id'));
+    }
 
     public function type()
     {
