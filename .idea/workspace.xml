@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ca78f95-75d8-478c-94be-583e8ae6a4c9" name="Default Changelist" comment="edit">
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/.gitignore" afterDir="false" />
+    <list default="true" id="4ca78f95-75d8-478c-94be-583e8ae6a4c9" name="Default Changelist" comment="refactoring Repositories">
+      <change afterPath="$PROJECT_DIR$/app/Console/Commands/SendEmail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/emails/objects_parameters.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Modules.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Modules.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Schedulers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Schedulers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/UserObject.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserObject.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/ModulesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/ModulesRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/UserObjectRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/UserObjectRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/ModulesService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/ModulesService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/how-i-make/how i make project ubuntu.docx" beforeDir="false" afterPath="$PROJECT_DIR$/how-i-make/how i make project ubuntu.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/debugbar/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,7 +247,7 @@
       <workItem from="1611517647925" duration="36848000" />
       <workItem from="1611769406925" duration="36722000" />
       <workItem from="1612042803117" duration="34377000" />
-      <workItem from="1612199179894" duration="26514000" />
+      <workItem from="1612199179894" duration="70228000" />
     </task>
     <task id="LOCAL-00001" summary="initial laravel &amp; bootstrap">
       <created>1609173840767</created>
@@ -467,7 +466,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612204626055</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="refactoring Repositories">
+      <created>1612303512523</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1612303512523</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -529,7 +535,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="initial laravel &amp; bootstrap" />
     <MESSAGE value="add initial migrations" />
     <MESSAGE value="add elementary CRUD for Objects" />
     <MESSAGE value="add user_name in registration form &amp; add send mail using gmail SMTP" />
@@ -554,7 +559,8 @@
     <MESSAGE value="edit Request" />
     <MESSAGE value="add charts js" />
     <MESSAGE value="edit" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit" />
+    <MESSAGE value="refactoring Repositories" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring Repositories" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
