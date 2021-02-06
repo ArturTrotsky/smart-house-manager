@@ -126,10 +126,10 @@
                                     <td>{{ $scheduler->value }} {{ $module->type->unit }}</td>
                                     <td>{{ $scheduler->on_time }}</td>
                                     <td>{{ $scheduler->off_time }}</td>
-                                    <td>{{ $scheduler->every_day }}</td>
-                                    <td>{{ $scheduler->every_week }}</td>
-                                    <td>{{ $scheduler->every_work_day }}</td>
-                                    <td>{{ $scheduler->weekend }}</td>
+                                    <td>@convert($scheduler->every_day)</td>
+                                    <td>@convert($scheduler->every_week)</td>
+                                    <td>@convert($scheduler->every_work_day)</td>
+                                    <td>@convert($scheduler->weekend)</td>
 
                                     <td class="table-buttons">
                                         <a href="{{ route('schedulers.edit', $scheduler->id) }}"
@@ -162,7 +162,7 @@
                     <br>
                     <h3>Module parameter change history</h3>
                     <form name="test" method="get" action="/">
-                    <input type="text" name="datetimes" />
+                        <input type="text" name="datetimes"/>
                         <input type="submit" value="Show">
                     </form>
 
@@ -188,7 +188,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
     <script>
-        $(function() {
+        $(function () {
             $('input[name="datetimes"]').daterangepicker({
                 timePicker: true,
                 startDate: moment().startOf('day'),

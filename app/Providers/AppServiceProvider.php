@@ -25,9 +25,13 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         // Not used
-        Blade::directive('generateIP', function(){
+        Blade::directive('generateIP', function () {
             return rand(0, 255) . '.' . rand(0, 255) . '.' . rand(0, 255) . '.' .
                 rand(0, 255) . ':' . rand(1, 65535);
+        });
+
+        Blade::directive('convert', function ($value) {
+            return "<?php echo ($value == 1) ? 'yes' : 'no';?>";
         });
     }
 }
