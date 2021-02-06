@@ -135,8 +135,8 @@
                                                         type="text">
 
                                                     <option selected
-                                                            value="{{ $scheduler->getActivePeriodColumnName($scheduler->id) }}">
-                                                        {{$scheduler->getActivePeriodName($scheduler->id)}}</option>
+                                                            value="{{ $schedulerPeriodColumnName }}">
+                                                        {{ $schedulerPeriodColumnValue }}</option>
                                                     <option value="every_day">Every day</option>
                                                     <option value="every_week">Every week</option>
                                                     <option value="every_work_day">Every work day</option>

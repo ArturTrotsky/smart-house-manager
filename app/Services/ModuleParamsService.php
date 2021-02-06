@@ -34,22 +34,6 @@ class ModuleParamsService extends BaseService
             }
         }
 
-        /* for ($i = 0; $i < count($data); $i++) {
-             if ($i == 0) {
-                 $newData[$i] = $data[$i];
-                 continue;
-             }
-             $newData[$i + count($data) - 1]['value'] = $data[$i - 1]['value'];
-             $newData[$i + count($data) - 1]['date'] = $data[$i]['date'];
-             $newData[$i] = $data[$i];
-         }
-
-
-         usort($newData, function ($a, $b) {
-             if ($a['date'] == $b['date']) return 0;
-             return $a['date'] > $b['date'] ? 1 : -1;
-         });*/
-
         return $data;
     }
 }

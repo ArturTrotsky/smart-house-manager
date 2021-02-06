@@ -82,8 +82,12 @@ class SchedulerController extends Controller
      */
     public function edit($id)
     {
+        $scheduler = $this->schedulers->findById($id);
+
         return view('schedulers.edit', [
-            'scheduler' => $this->schedulers->findById($id)
+            'scheduler' => $scheduler,
+            'schedulerPeriodColumnName' => $this->schedulers->periodColumnName($scheduler),
+            'schedulerPeriodColumnValue' => $this->schedulers->periodColumnValue($scheduler)
         ]);
     }
 
