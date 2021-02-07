@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ModulesStoreRequest;
 use App\Http\Requests\ModulesUpdateRequest;
-use App\Models\ModuleParams;
 use App\Models\Modules;
 use App\Services\ModuleParamsService;
 use App\Services\ModulesService;
 use App\Services\ModuleTypesService;
 use App\Services\SchedulersService;
 use App\Services\UserObjectService;
+use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 class ModulesController extends Controller
 {
@@ -83,15 +84,23 @@ class ModulesController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id, Request $request)
     {
         $module = $this->modules->findById($id);
         $scheduler = $this->schedulers->findByModuleId($module->id);
 
-        $dataForChart = $this->moduleParams->getDataForCharts($id);
+        if ($request->get('datetimes')) {
+            $dateTimeFrom = explode(' - ', $request->get('datetimes'))[0];
+            $dateTimeTo = explode(' - ', $request->get('datetimes'))[1];
+        } else {
+            $dateTimeFrom = Carbon::now()->subMonth(3)->format('m/d/Y h:i A');
+            $dateTimeTo = Carbon::now()->format('m/d/Y h:i A');
+        }
+
+        $dataForChart = $this->moduleParams->getDataForCharts($id, $dateTimeFrom, $dateTimeTo);
 
         return view('modules.show',
-            compact('module', 'scheduler', 'dataForChart'));
+            compact('module', 'scheduler', 'dataForChart', 'dateTimeFrom', 'dateTimeTo'));
     }
 
     /**

@@ -68,7 +68,8 @@
 
                                                     <div class="input-group date" id="timepicker_on"
                                                          data-target-input="nearest">
-                                                        <input type="text" name="on_time" value="{{ old('on_time') ?? '' }}"
+                                                        <input type="text" name="on_time"
+                                                               value="{{ old('on_time') ?? '' }}"
                                                                data-target="#timepicker_on"
                                                                placeholder="Enter the time of module activation"
                                                                class="form-control datetimepicker-input
@@ -96,7 +97,8 @@
 
                                                     <div class="input-group date" id="timepicker_off"
                                                          data-target-input="nearest">
-                                                        <input type="text" name="off_time" value="{{ old('off_time') ?? '' }}"
+                                                        <input type="text" name="off_time"
+                                                               value="{{ old('off_time') ?? '' }}"
                                                                data-target="#timepicker_off"
                                                                placeholder="Enter the time the module deactivation"
                                                                class="form-control datetimepicker-input

@@ -17,13 +17,11 @@ class ModuleParamsRepository extends BaseRepository
         $this->model = $model;
     }
 
-    /**
-     *
-     *
-     * @return array
-     */
-    public function findByModuleIdWithTrashed(int $id): Collection
+    public function findByModuleIdWithTrashed(int $id, string $from, string $to): Collection
     {
-        return $this->model->withTrashed()->where('module_id', $id)->get();
+        return $this->model->withTrashed()
+            ->whereBetween('created_at', [$from, $to])
+            ->where('module_id', $id)
+            ->get();
     }
 }

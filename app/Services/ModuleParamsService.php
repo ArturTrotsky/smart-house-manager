@@ -3,7 +3,8 @@
 namespace App\Services;
 
 use App\Repositories\ModuleParamsRepository;
-use Illuminate\Database\Eloquent\Collection;
+use Carbon\Carbon;
+use Exception;
 
 class ModuleParamsService extends BaseService
 {
@@ -12,28 +13,34 @@ class ModuleParamsService extends BaseService
         $this->repo = $repo;
     }
 
-    /**
-     *
-     *
-     * @return Collection
-     */
-    public function findByModuleIdWithTrashed(int $id): Collection
+    public function getDataForCharts(int $id, $dateTimeFrom, $dateTimeTo)
     {
-        return $this->repo->findByModuleIdWithTrashed($id);
-    }
+        try {
+            $from = Carbon::CreateFromFormat('m/d/Y h:i A', $dateTimeFrom)->format('Y-m-d H:i:s');
+            $to = Carbon::CreateFromFormat('m/d/Y h:i A', $dateTimeTo)->format('Y-m-d H:i:s');
 
-    public function getDataForCharts(int $id): array
-    {
-        $moduleParams = $this->repo->findByModuleIdWithTrashed($id);
-        foreach ($moduleParams as $key => $item) {
-            $data[$key]['value'] = $item->value;
-            $data[$key]['date'] = $item->created_at->format('Y-m-d H:i:s');
-            if ($key == count($moduleParams) - 1) {
-                $data[count($moduleParams)]['value'] = $item->value;
-                $data[count($moduleParams)]['date'] = now()->format('Y-m-d H:i:s');
+            $moduleParams = $this->repo->findByModuleIdWithTrashed($id, $from, $to);
+
+            if ($moduleParams->isEmpty()) {
+                throw new Exception();
             }
-        }
 
-        return $data;
+            foreach ($moduleParams as $key => $item) {
+                $data[$key]['value'] = $item->value;
+                $data[$key]['date'] = $item->created_at->format('Y-m-d H:i:s');
+                if ($key == count($moduleParams) - 1) {
+                    $data[count($moduleParams)]['value'] = $item->value;
+                    $data[count($moduleParams)]['date'] = now()->format('Y-m-d H:i:s');
+                }
+            }
+
+            session()->forget('errorDataForChart');
+
+            return $data;
+
+        } catch (Exception $exception) {
+            return back()->withError($exception->getMessage())
+                ->with('errorDataForChart', "Change the date interval. Data not found.");
+        }
     }
 }

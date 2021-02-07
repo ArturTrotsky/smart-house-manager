@@ -40,6 +40,7 @@
 <script>
     $(document).ready(function () {
         $('.alert-success').fadeOut(3600);
+        $('.alert-danger').fadeOut(7200);
     });
 </script>
 

@@ -160,11 +160,26 @@
             <div class="row">
                 <div class="col-md-12">
                     <br>
-                    <h3>Module parameter change history</h3>
-                    <form name="test" method="get" action="/">
-                        <input type="text" name="datetimes"/>
-                        <input type="submit" value="Show">
+                    <h3>Module parameters history</h3>
+
+                    <form method="POST" action="{{ route('modules.show', $module->id) }}">
+                        @csrf
+                        @method('get')
+                        <div class="input-group col-md-4">
+                            <input type="text" name="datetimes" class="form-control"
+                                   value="{{$dateTimeFrom}} - {{$dateTimeTo}}"/>
+                            <input type="hidden" name="module_id" value="{{ $module->id }}">
+                            <span class="input-group-prepend">
+                                <button class="btn btn-primary">OK</button>
+                            </span>
+                        </div>
                     </form>
+
+                    @if(session()->get('errorDataForChart'))
+                        <div class="alert alert-danger mt-3">
+                            {{ session()->get('errorDataForChart') }}
+                        </div>
+                    @endif
 
                     <div id="moduleParamsChart"></div>
 
@@ -191,10 +206,8 @@
         $(function () {
             $('input[name="datetimes"]').daterangepicker({
                 timePicker: true,
-                startDate: moment().startOf('day'),
-                endDate: moment(),
                 locale: {
-                    format: 'M/DD hh:mm A'
+                    format: 'M/DD/YYYY hh:mm A'
                 }
             });
         });
