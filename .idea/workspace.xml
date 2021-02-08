@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ca78f95-75d8-478c-94be-583e8ae6a4c9" name="Default Changelist" comment="add blade function convert">
-      <change afterPath="$PROJECT_DIR$/how-i-make/.~lock.task.docx#" afterDir="false" />
+    <list default="true" id="4ca78f95-75d8-478c-94be-583e8ae6a4c9" name="Default Changelist" comment="add timeDatePicker for Charts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ModulesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ModulesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/ModuleParamsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/ModuleParamsRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/ModuleParamsService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/ModuleParamsService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/modules/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modules/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/schedulers/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/schedulers/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/SendEmail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/SendEmail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,7 +246,12 @@
       <workItem from="1612199179894" duration="73908000" />
       <workItem from="1612606609656" duration="5349000" />
       <workItem from="1612643018439" duration="647000" />
-      <workItem from="1612645665349" duration="30930000" />
+      <workItem from="1612645665349" duration="31820000" />
+      <workItem from="1612808727952" duration="320000" />
+      <workItem from="1612809301249" duration="87000" />
+      <workItem from="1612809431406" duration="13000" />
+      <workItem from="1612809589391" duration="16000" />
+      <workItem from="1612809728221" duration="4579000" />
     </task>
     <task id="LOCAL-00001" summary="initial laravel &amp; bootstrap">
       <created>1609173840767</created>
@@ -498,7 +498,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612648636847</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="add timeDatePicker for Charts">
+      <created>1612733160457</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1612733160458</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -560,7 +567,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="delete fucking laravel breeze (auth) and add standart auth" />
     <MESSAGE value="add bootstap styles on auth views" />
     <MESSAGE value="add bootstrap for password.reset.blade" />
     <MESSAGE value="add checkbox on objects.create.blade" />
@@ -585,7 +591,8 @@
     <MESSAGE value="added email newsletter" />
     <MESSAGE value="edit SchedulerService" />
     <MESSAGE value="add blade function convert" />
-    <option name="LAST_COMMIT_MESSAGE" value="add blade function convert" />
+    <MESSAGE value="add timeDatePicker for Charts" />
+    <option name="LAST_COMMIT_MESSAGE" value="add timeDatePicker for Charts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

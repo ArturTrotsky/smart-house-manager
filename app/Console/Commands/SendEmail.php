@@ -46,6 +46,8 @@ class SendEmail extends Command
 
         foreach ($users as $user) {
 
+            $dataForEmail = [];
+
             foreach ($user->objects as $key1 => $object) {
                 $dataForEmail[$key1]['object_name'] = $object->name;
                 $modules = $object->modules;
@@ -55,6 +57,7 @@ class SendEmail extends Command
                         $module->getCurrentParams->value . ' ' . $module->type->unit;
                 }
             }
+
             Mail::send('emails.objects_parameters', ['dataForEmail' => $dataForEmail, 'user' => $user], function ($message) use ($user) {
                 $message->to($user->email, "$user->name $user->second_name")
                     ->subject('Module parameters');
