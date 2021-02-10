@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ca78f95-75d8-478c-94be-583e8ae6a4c9" name="Default Changelist" comment="add timeDatePicker for Charts">
+    <list default="true" id="4ca78f95-75d8-478c-94be-583e8ae6a4c9" name="Default Changelist" comment="refactoring SendEmail">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/SendEmail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/SendEmail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/#home.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/#welcome.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/#401.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/#403.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/#404.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/#419.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/#429.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/#500.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/#503.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/#illustrated-layout.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/#layout.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/#minimal.blade.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,7 +261,9 @@
       <workItem from="1612809301249" duration="87000" />
       <workItem from="1612809431406" duration="13000" />
       <workItem from="1612809589391" duration="16000" />
-      <workItem from="1612809728221" duration="4579000" />
+      <workItem from="1612809728221" duration="4801000" />
+      <workItem from="1612892296153" duration="1735000" />
+      <workItem from="1612978789111" duration="638000" />
     </task>
     <task id="LOCAL-00001" summary="initial laravel &amp; bootstrap">
       <created>1609173840767</created>
@@ -505,7 +517,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612733160458</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="refactoring SendEmail">
+      <created>1612816247300</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1612816247300</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -567,7 +586,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add bootstap styles on auth views" />
     <MESSAGE value="add bootstrap for password.reset.blade" />
     <MESSAGE value="add checkbox on objects.create.blade" />
     <MESSAGE value="refactoring object views" />
@@ -592,7 +610,8 @@
     <MESSAGE value="edit SchedulerService" />
     <MESSAGE value="add blade function convert" />
     <MESSAGE value="add timeDatePicker for Charts" />
-    <option name="LAST_COMMIT_MESSAGE" value="add timeDatePicker for Charts" />
+    <MESSAGE value="refactoring SendEmail" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring SendEmail" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
