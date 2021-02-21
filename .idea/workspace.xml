@@ -169,13 +169,6 @@
       <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
       <path value="$PROJECT_DIR$/vendor/fakerphp/faker" />
       <path value="$PROJECT_DIR$/vendor/laravel/breeze" />
-      <path value="$PROJECT_DIR$/vendor/friendsofphp/php-cs-fixer" />
-      <path value="$PROJECT_DIR$/vendor/stechstudio/laravel-php-cs-fixer" />
-      <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
-      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
-      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
-      <path value="$PROJECT_DIR$/vendor/php-cs-fixer/diff" />
     </include_path>
   </component>
   <component name="ProjectId" id="1mG2njjtpN1y6dVc1emAFVG1ULn" />
@@ -283,19 +276,6 @@
       <workItem from="1612809728221" duration="4801000" />
       <workItem from="1612892296153" duration="1735000" />
       <workItem from="1612978789111" duration="638000" />
-      <workItem from="1613024791473" duration="1959000" />
-      <workItem from="1613032675183" duration="294000" />
-      <workItem from="1613032983260" duration="451000" />
-      <workItem from="1613033445829" duration="15000" />
-      <workItem from="1613220262920" duration="4884000" />
-      <workItem from="1613505147234" duration="332000" />
-      <workItem from="1613553267680" duration="50000" />
-      <workItem from="1613569513622" duration="1334000" />
-      <workItem from="1613896624304" duration="764000" />
-      <workItem from="1613897429272" duration="3058000" />
-      <workItem from="1613916745468" duration="902000" />
-      <workItem from="1613917667040" duration="180000" />
-      <workItem from="1613917864133" duration="230000" />
     </task>
     <task id="LOCAL-00001" summary="initial laravel &amp; bootstrap">
       <created>1609173840767</created>
@@ -618,6 +598,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="add bootstrap for password.reset.blade" />
     <MESSAGE value="add checkbox on objects.create.blade" />
     <MESSAGE value="refactoring object views" />
     <MESSAGE value="refactoring modules" />
@@ -642,8 +623,7 @@
     <MESSAGE value="add blade function convert" />
     <MESSAGE value="add timeDatePicker for Charts" />
     <MESSAGE value="refactoring SendEmail" />
-    <MESSAGE value="edited with laravel-php-cs-fixer" />
-    <option name="LAST_COMMIT_MESSAGE" value="edited with laravel-php-cs-fixer" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring SendEmail" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
