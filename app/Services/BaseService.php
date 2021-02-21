@@ -78,5 +78,4 @@ class BaseService
     {
         return $this->repo->count();
     }
-
 }

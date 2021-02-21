@@ -21,8 +21,7 @@ class ModulesController extends Controller
         ModulesService $modules,
         ModuleParamsService $moduleParams,
         SchedulersService $schedulers
-    )
-    {
+    ) {
         $this->moduleTypes = $moduleTypes;
         $this->objects = $objects;
         $this->modules = $modules;
@@ -99,8 +98,10 @@ class ModulesController extends Controller
 
         $dataForChart = $this->moduleParams->getDataForCharts($id, $dateTimeFrom, $dateTimeTo);
 
-        return view('modules.show',
-            compact('module', 'scheduler', 'dataForChart', 'dateTimeFrom', 'dateTimeTo'));
+        return view(
+            'modules.show',
+            compact('module', 'scheduler', 'dataForChart', 'dateTimeFrom', 'dateTimeTo')
+        );
     }
 
     /**

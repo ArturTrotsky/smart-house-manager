@@ -37,7 +37,6 @@ class ModuleParamsService extends BaseService
             session()->forget('errorDataForChart');
 
             return $data;
-
         } catch (Exception $exception) {
             return back()->withError($exception->getMessage())
                 ->with('errorDataForChart', "Change the date interval. Data not found.");

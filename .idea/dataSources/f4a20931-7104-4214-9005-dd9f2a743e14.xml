@@ -2,7 +2,7 @@
 <dataSource name="smart_house_manager">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.20">
     <root id="1">
-      <ServerVersion>8.0.22</ServerVersion>
+      <ServerVersion>8.0.23</ServerVersion>
       <DefaultEngine>InnoDB</DefaultEngine>
       <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
       <DefaultCasing>exact</DefaultCasing>
@@ -1219,14 +1219,12 @@ SELECT|sys.sys_config
       <Position>8</Position>
       <DataType>timestamp|0s</DataType>
     </column>
-    <index id="349" parent="289" name="modules_object_id_name_unique">
-      <ColNames>object_id
-name</ColNames>
-      <Unique>1</Unique>
+    <index id="349" parent="289" name="modules_module_type_id_foreign">
+      <ColNames>module_type_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="350" parent="289" name="modules_module_type_id_foreign">
-      <ColNames>module_type_id</ColNames>
+    <index id="350" parent="289" name="modules_object_id_foreign">
+      <ColNames>object_id</ColNames>
       <Type>btree</Type>
     </index>
     <key id="351" parent="289" name="PRIMARY">
@@ -1234,42 +1232,41 @@ name</ColNames>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="352" parent="289" name="modules_object_id_name_unique">
-      <ColNames>object_id
-name</ColNames>
-      <UnderlyingIndexName>modules_object_id_name_unique</UnderlyingIndexName>
-    </key>
-    <foreign-key id="353" parent="289" name="modules_module_type_id_foreign">
+    <foreign-key id="352" parent="289" name="modules_module_type_id_foreign">
       <ColNames>module_type_id</ColNames>
       <RefTableName>module_types</RefTableName>
       <RefColNames>id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="354" parent="289" name="modules_object_id_foreign">
+    <foreign-key id="353" parent="289" name="modules_object_id_foreign">
       <ColNames>object_id</ColNames>
       <RefTableName>user_objects</RefTableName>
       <RefColNames>id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="355" parent="290" name="id">
+    <column id="354" parent="290" name="id">
       <Position>1</Position>
       <DataType>bigint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="356" parent="290" name="name">
+    <column id="355" parent="290" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="357" parent="290" name="created_at">
+    <column id="356" parent="290" name="created_at">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
     </column>
-    <column id="358" parent="290" name="updated_at">
+    <column id="357" parent="290" name="updated_at">
       <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+    </column>
+    <column id="358" parent="290" name="deleted_at">
+      <Position>5</Position>
       <DataType>timestamp|0s</DataType>
     </column>
     <key id="359" parent="290" name="PRIMARY">

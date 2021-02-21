@@ -45,7 +45,6 @@ class SendEmail extends Command
         $users = User::all();
 
         foreach ($users as $user) {
-
             $dataForEmail = [];
 
             foreach ($user->objects as $key1 => $object) {

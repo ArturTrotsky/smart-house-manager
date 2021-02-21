@@ -2,28 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ca78f95-75d8-478c-94be-583e8ae6a4c9" name="Default Changelist" comment="refactoring SendEmail">
+      <change afterPath="$PROJECT_DIR$/task.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f4a20931-7104-4214-9005-dd9f2a743e14.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f4a20931-7104-4214-9005-dd9f2a743e14.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/smart-house-manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/smart-house-manager.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/#home.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/#welcome.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/errors/#401.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/errors/#403.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/errors/#404.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/errors/#419.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/errors/#429.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/errors/#500.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/errors/#503.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/errors/#illustrated-layout.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/errors/#layout.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/errors/#minimal.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/SendEmail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/SendEmail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ModulesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ModulesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Modules.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Modules.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Interfaces/BaseInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Interfaces/BaseInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/BaseService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/BaseService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/ModuleParamsService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/ModuleParamsService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/how-i-make/how i make project ubuntu.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/how-i-make/how i make project vagrant.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/how-i-make/task.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution />
+    <execution>
+      <executable path="composer" />
+    </execution>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -40,7 +52,7 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.0">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/psr/container" />
       <path value="$PROJECT_DIR$/vendor/psr/http-client" />
@@ -157,6 +169,13 @@
       <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
       <path value="$PROJECT_DIR$/vendor/fakerphp/faker" />
       <path value="$PROJECT_DIR$/vendor/laravel/breeze" />
+      <path value="$PROJECT_DIR$/vendor/friendsofphp/php-cs-fixer" />
+      <path value="$PROJECT_DIR$/vendor/stechstudio/laravel-php-cs-fixer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/php-cs-fixer/diff" />
     </include_path>
   </component>
   <component name="ProjectId" id="1mG2njjtpN1y6dVc1emAFVG1ULn" />
@@ -176,10 +195,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/node_modules/bootstrap/scss/_tables.scss" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Services" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Dropbox/keys/github" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -264,6 +283,19 @@
       <workItem from="1612809728221" duration="4801000" />
       <workItem from="1612892296153" duration="1735000" />
       <workItem from="1612978789111" duration="638000" />
+      <workItem from="1613024791473" duration="1959000" />
+      <workItem from="1613032675183" duration="294000" />
+      <workItem from="1613032983260" duration="451000" />
+      <workItem from="1613033445829" duration="15000" />
+      <workItem from="1613220262920" duration="4884000" />
+      <workItem from="1613505147234" duration="332000" />
+      <workItem from="1613553267680" duration="50000" />
+      <workItem from="1613569513622" duration="1334000" />
+      <workItem from="1613896624304" duration="764000" />
+      <workItem from="1613897429272" duration="3058000" />
+      <workItem from="1613916745468" duration="902000" />
+      <workItem from="1613917667040" duration="180000" />
+      <workItem from="1613917864133" duration="230000" />
     </task>
     <task id="LOCAL-00001" summary="initial laravel &amp; bootstrap">
       <created>1609173840767</created>
@@ -586,7 +618,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add bootstrap for password.reset.blade" />
     <MESSAGE value="add checkbox on objects.create.blade" />
     <MESSAGE value="refactoring object views" />
     <MESSAGE value="refactoring modules" />
@@ -611,7 +642,8 @@
     <MESSAGE value="add blade function convert" />
     <MESSAGE value="add timeDatePicker for Charts" />
     <MESSAGE value="refactoring SendEmail" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring SendEmail" />
+    <MESSAGE value="edited with laravel-php-cs-fixer" />
+    <option name="LAST_COMMIT_MESSAGE" value="edited with laravel-php-cs-fixer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

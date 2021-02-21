@@ -16,4 +16,3 @@ interface BaseInterface
 
     public function findById(int $id);
 }
-

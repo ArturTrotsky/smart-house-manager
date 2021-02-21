@@ -30,7 +30,7 @@ class Modules extends Model
      */
     public function scopeCurrentUserModule($query)
     {
-        $query->where('object_id', UserObject::where('user_id',Auth::id())->value('id'));
+        $query->where('object_id', UserObject::where('user_id', Auth::id())->value('id'));
     }
 
     public function type()
