@@ -22,8 +22,6 @@
 @endforeach
 
 <br>
-<a href="http://smart-house-manager">Visit smart-house-manager</a>
+<a href="http://smart-house-manager">Visit smart-house-manager site</a>
 </body>
 </html>
-
-

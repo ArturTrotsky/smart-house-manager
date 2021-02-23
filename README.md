@@ -76,6 +76,11 @@ Set the mail connection in .env
     MAIL_FROM_ADDRESS=
     MAIL_FROM_NAME=
 
+Create and Run Crontab
+
+    $ crontab -e
+    * * * * * cd project-folder && php artisan schedule:run >> /dev/null 2>&1
+
 Start the local development server
 
     php artisan serve
